@@ -4,8 +4,8 @@ import PrimaryButton from "../common/PrimaryButton";
 
 const HomeWhoWeAre = () => {
   return (
-    <div className="h-screen w-full bg-bg1 bg-cover">
-      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-[500px] ">
+    <div className=" w-full bg-bg1 bg-cover">
+      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-[500px]">
         <div className="flex justify-between items-end relative overflow-hidden pb-28">
           <div className="anton-regular text-[#D30003] text-[128px] leading-[122px] relative w-[30%]">
             WE
