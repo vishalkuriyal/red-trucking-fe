@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "kind-sans-regular";
+  src: url('/fonts/kindsans-regular.otf')format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "kind-sans-medium";
+  src: url('/fonts/kindsans-medium.otf')format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "kind-sans-semibold";
+  src: url('/fonts/kindsans-semibold.otf')format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "kind-sans-bold";
+  src: url('/fonts/kindsans-bold.otf')format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gradient-stroke {
+  position: relative;
+  color: transparent; /* Fill color */
+  -webkit-text-stroke: 1px transparent;
+  background: linear-gradient(to top, #F5F5F5, #313131, #313131); /* Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #0B0B0B; /* Inner text color */
+}
