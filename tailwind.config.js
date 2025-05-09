@@ -29,6 +29,7 @@ export default {
       backgroundImage: {
         bg1: "url('../src/assets/images/homeWhoWeAreBg.png')",
         bg2: "url('../src/assets/images/transportationPartnerBg.png')",
+        bg3: "url('../src/assets/images/transportServiceimg.png')",
       },
     },
     

@@ -10,6 +10,7 @@ import HomeJoinUs from "./HomeJoinUs";
 import HomeLocation from "./HomeLocation";
 import HomeExploreBlogs from "./HomeExploreBlogs";
 import HomeContactUs from "./HomeContactUs";
+import HomePassion from "./HomePassion";
 
 const HomePage = () => {
   return (
@@ -34,7 +35,8 @@ const HomePage = () => {
       <HomeJoinUs />
       <HomeLocation />
       <HomeExploreBlogs />
-      <HomeContactUs/>
+      <HomePassion />
+      <HomeContactUs />
     </>
   );
 };

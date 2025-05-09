@@ -19,17 +19,16 @@ const HomeWhoWeAre = () => {
           <div className="flex w-[70%]">
             <div className="w-[70%]">
               <h3 className="anton-regular text-5xl text-white mb-7">
-                Spread across 48 states makes us{" "}
-                <span className="text-primary">ubiquitous</span> and{" "}
-                <span className="text-primary">omnipresent</span>
+                TRUSTED TRUCKING AND LOGISTICS ACROSS
+                <span className="text-primary"> 48 STATES</span>
               </h3>
               <p className="font-kindsans-regular text-white mb-6 w-[70%]">
-                We provide professional trucking, transportation, warehousing
-                and logistics services all across the USA. Our extensive network
-                spread across 48 states makes us ubiquitous and omnipresent. Our
-                professional code is based on safety, sustainability and rich
-                customer experience. The latest practices in the industry put us
-                far ahead of our competition; on the road and in the business.
+                R.E.D. Trucking & Logistics offers full-service transportation,
+                warehousing and logistics across 48 U.S. states. Our extensive
+                network helps businesses move goods quickly and safely. With a
+                strong focus on reliability, compliance and timely delivery, we
+                support smooth supply chains and help clients stay ahead in a
+                fast-moving, competitive logistics environment.
               </p>
               <PrimaryButton>Learn More</PrimaryButton>
             </div>

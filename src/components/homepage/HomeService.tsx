@@ -16,25 +16,25 @@ type ServiceTypeProps = {
 const services: ServiceTypeProps[] = [
   {
     name: "TRANSPORT",
-    des: "As one of the most trusted transport and logistic services on the East Coast...",
+    des: "Reliable transport solutions including port drayage, rail service and local FTL for fast, secure delivery.",
     path: "",
     image: transport,
   },
   {
     name: "WAREHOUSING",
-    des: "As one of the most trusted transport and logistic services on the East Coast...",
+    des: "Secure and scalable storage solutions designed to support smooth distribution and supply chain flow.",
     path: "",
     image: warehouse,
   },
   {
     name: "LOGISTICS",
-    des: "As one of the most trusted transport and logistic services on the East Coast...",
+    des: "We manage end-to-end coordination, ensuring every shipment moves efficiently from origin to destination without delays.",
     path: "",
     image: logistics,
   },
   {
     name: "TRANSLOADING",
-    des: "As one of the most trusted transport and logistic services on the East Coast...",
+    des: "Fast & flexible cargo transfers between modes to reduce transit time and improve freight movement reliability.",
     path: "",
     image: transloading,
   },
@@ -46,7 +46,7 @@ const HomeService = () => {
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
         <div className="flex justify-between items-end mb-16">
           <h3 className="anton-regular text-white text-[64px] leading-[66px]">
-            <span className="text-primary">TRANSPORT</span>
+            <span className="text-primary">OUR</span>
             <br />
             SERVICES
           </h3>

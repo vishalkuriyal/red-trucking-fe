@@ -49,3 +49,35 @@
   background-clip: text;
   -webkit-text-fill-color: #0B0B0B; /* Inner text color */
 }
+
+.gradient-stroke-primary {
+  position: relative;
+  color: transparent; /* Fill color */
+  -webkit-text-stroke: 1px #88090B;
+}
+
+.gradient-stroke-white {
+  position: relative;
+  color: transparent; /* Fill color */
+  -webkit-text-stroke: 1px white;
+}
+
+.gradient-stroke-2 {
+  position: relative;
+  color: transparent; /* Fill color */
+  -webkit-text-stroke: 1px transparent;
+  background: linear-gradient(to top, #484848, #F20003); /* Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #0B0B0B; /* Inner text color */
+}
+
+.gradient-stroke-3 {
+  position: relative;
+  color: transparent; /* Fill color */
+  -webkit-text-stroke: 1px transparent;
+  background: linear-gradient(to top, #F5F5F5, #313131, #313131); /* Gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #191919; /* Inner text color */
+}

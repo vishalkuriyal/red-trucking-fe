@@ -7,11 +7,11 @@ const HomePageHero = () => {
     <div className="absolute h-full flex justify-center items-center top-0 w-full">
       <div className="mt-20">
         <h2 className="anton-regular text-[230px] text-[#D30003]/80 tracking-[2%] leading-[210px]">
-          WE ARE
+          LOGISTICS
         </h2>
         <p className="anton-regular text-6xl text-white ml-6">
-          LEADING
-          <br /> THE WAY
+          Made Simple for
+          <br /> Your Business
         </p>
         <button className="font-kindsans-bold flex group ml-6 mt-8">
           <p className="py-4 px-5 bg-primary text-white">

@@ -4,10 +4,8 @@ const TransportationPartner = () => {
       <div className="max-w-screen-2xl mx-auto">
         <div className="flex flex-col items-end">
           <h3 className="text-white anton-regular text-[96px] text-right leading-[92px] mb-6">
-            YOUR <br />
-            TRANSPORTATION
-            <br />
-            PARTNER
+            MOVING <br />
+            BUSINESS FORWARD
           </h3>
           <p className="text-white font-kindsans-regular w-[40%] text-right">
             {" "}
