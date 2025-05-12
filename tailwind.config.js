@@ -30,6 +30,8 @@ export default {
         bg1: "url('../src/assets/images/homeWhoWeAreBg.png')",
         bg2: "url('../src/assets/images/transportationPartnerBg.png')",
         bg3: "url('../src/assets/images/transportServiceimg.png')",
+        bg4: "url('../src/assets/images/aboutWarehouseServiceBg.png')",
+        bg5: "url('../src/assets/images/aboutTransloadingBg.png')",
       },
     },
     

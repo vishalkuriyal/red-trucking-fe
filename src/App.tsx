@@ -5,6 +5,9 @@ import AboutPage from "./components/aboutpage/AboutPage";
 import Footer from "./components/Footer";
 import TransportService from "./components/servicepage/transportservice/TransportService";
 import WarehouseService from "./components/servicepage/warehouseservice/WarehouseService";
+import LogisticService from "./components/servicepage/logisticservice/LogisticService";
+import TransloadingService from "./components/servicepage/transloadingservice/TransloadingService";
+import RedDrivers from "./components/reddrivers/RedDrivers";
 
 function App() {
   return (
@@ -15,7 +18,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/transport" element={<TransportService />} />
-          <Route path="/warehouse" element={<WarehouseService/>} />
+          <Route path="/warehousing" element={<WarehouseService />} />
+          <Route path="/logistic" element={<LogisticService />} />
+          <Route path="/transloading" element={<TransloadingService />} />
+          <Route path="/red-drivers" element={<RedDrivers/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
