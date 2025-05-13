@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "formik": "^2.4.6",
+    "lucide-react": "^0.510.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.3",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
