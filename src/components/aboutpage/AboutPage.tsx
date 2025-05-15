@@ -23,6 +23,7 @@ const AboutPage = () => {
       <AboutSafety />
       <AboutSustanability />
       <HomeContactUs/>
+  
     </div>
   )
 }
