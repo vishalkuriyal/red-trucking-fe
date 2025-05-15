@@ -26,6 +26,7 @@ const cards: CardType[] = [
   },
 ];
 
+
 const DrivingWithRed = () => {
   return (
     <div className="bg-secondary">
