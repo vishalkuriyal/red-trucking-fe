@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import bg from "../../assets/images/homeHero.png";
 import truck from "../../assets/images/redTruck.png";
 import { motion } from "motion/react";
 
 const HomePageHero = () => {
+  const navigate = useNavigate()
   return (
     <div className="h-[600px] md:h-[900px] relative overflow-hidden">
       <img src={bg} className="w-full object-cover h-full" alt="" />
@@ -16,7 +18,13 @@ const HomePageHero = () => {
               Made Simple for
               <br /> Your Business
             </p>
-            <button className="font-kindsans-bold flex group md:ml-6 mt-4 md:mt-8 relative z-20">
+            <button
+              className="font-kindsans-bold flex group md:ml-6 mt-4 md:mt-8 relative z-20"
+              onClick={() => {
+                navigate("/transport");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
               <p className="py-4 px-5 bg-primary text-white">
                 EXPLORE OUR SERVICES
               </p>

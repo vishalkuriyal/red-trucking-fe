@@ -71,7 +71,7 @@ const links: LinkType[] = [
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   // const [isServiceOpen, setIsServiceOpen] = useState(false);
 
   return (
@@ -134,7 +134,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-5 flex justify-between items-center">
-        <img src={logo} className="" alt="" />
+        <Link
+          to={"/"}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src={logo} className="" alt="" />
+        </Link>
         <nav className="hidden sm:flex gap-14 items-center">
           {links.map((link, index) => {
             // Check if link has service property
@@ -153,6 +158,9 @@ const Navbar = () => {
                       <Link
                         to={ser.path}
                         key={idx}
+                        onClick={() =>
+                          window.scrollTo({ top: 0, behavior: "smooth" })
+                        }
                         className="pl-5 pr-16 py-2 border-t border-[#606060] bg-[#191919] text-white hover:bg-gradient-to-r from-primary to-[#191919]"
                       >
                         {ser.name}
@@ -168,6 +176,9 @@ const Navbar = () => {
               <div className="group" key={index}>
                 <Link
                   to={link.path}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                   className={`${
                     isActive
                       ? "font-kindsans-semibold"
@@ -185,7 +196,15 @@ const Navbar = () => {
             );
           })}
         </nav>
-        <PrimaryButton className="hidden md:flex" onClick={() => navigate('')}>Client Login</PrimaryButton>
+        <PrimaryButton
+          className="hidden md:flex"
+          onClick={() => {
+            navigate("");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          Client Login
+        </PrimaryButton>
         <div
           className="sm:hidden cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
@@ -201,6 +220,9 @@ const Navbar = () => {
               <div className="group mb-4 w-fit">
                 <Link
                   to={link.path}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                   className={`${
                     isActive
                       ? "font-kindsans-semibold"

@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import circle from "../../assets/images/homeWhoWeAreText.png";
 import whiteTruck from "../../assets/images/whiteTruck.png";
 import PrimaryButton from "../common/PrimaryButton";
 import { motion } from "motion/react";
 
 const HomeWhoWeAre = () => {
+  const navigate = useNavigate()
   return (
     <div className=" w-full bg-bg1 bg-cover overflow-hidden">
       <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-[250px] md:pt-[500px]">
@@ -31,7 +33,10 @@ const HomeWhoWeAre = () => {
                 support smooth supply chains and help clients stay ahead in a
                 fast-moving, competitive logistics environment.
               </p>
-              <PrimaryButton>Learn More</PrimaryButton>
+              <PrimaryButton onClick={() => {
+            navigate("/about");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}>Learn More</PrimaryButton>
             </div>
           </div>
           <div className=" absolute bottom-8 md:bottom-0 md:-top-10 -right-10">

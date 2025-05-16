@@ -4,7 +4,7 @@ import warehouse from "../../assets/svgs/warehouse.svg";
 import logistics from "../../assets/svgs/logistics.svg";
 import transloading from "../../assets/svgs/transloading.svg";
 import arrow from "../../assets/svgs/arrow.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 type ServiceTypeProps = {
   name: string;
@@ -17,30 +17,31 @@ const services: ServiceTypeProps[] = [
   {
     name: "TRANSPORT",
     des: "Reliable transport solutions including port drayage, rail service and local FTL for fast, secure delivery.",
-    path: "",
+    path: "/transport",
     image: transport,
   },
   {
     name: "WAREHOUSING",
     des: "Secure and scalable storage solutions designed to support smooth distribution and supply chain flow.",
-    path: "",
+    path: "/warehousing",
     image: warehouse,
   },
   {
     name: "LOGISTICS",
     des: "We manage end-to-end coordination, ensuring every shipment moves efficiently from origin to destination without delays.",
-    path: "",
+    path: "/logistic",
     image: logistics,
   },
   {
     name: "TRANSLOADING",
     des: "Fast & flexible cargo transfers between modes to reduce transit time and improve freight movement reliability.",
-    path: "",
+    path: "/transloading",
     image: transloading,
   },
 ];
 
 const HomeService = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-bg1 bg-cover">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-10 md:py-28">
@@ -50,7 +51,14 @@ const HomeService = () => {
             <br />
             SERVICES
           </h3>
-          <PrimaryButton>Learn More</PrimaryButton>
+          <PrimaryButton
+            onClick={() => {
+              navigate("/transport");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            Learn More
+          </PrimaryButton>
         </div>
         <div className="grid md:grid-cols-4 gap-20 md:gap-[14px] pb-10 md:pb-0">
           {services.map((service, index) => (
@@ -58,6 +66,7 @@ const HomeService = () => {
               to={service.path}
               className="relative pt-7 px-10 pb-20 bg-[#1D1D1D] hover:bg-primary group transition-all duration-500"
               key={index}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <div className="size-10 rounded-full bg-primary group-hover:bg-[#1d1d1d] flex justify-center items-center mb-6 transition-all duration-500">
                 <img src={arrow} alt="path" className="" />
