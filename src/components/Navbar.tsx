@@ -185,7 +185,7 @@ const Navbar = () => {
             );
           })}
         </nav>
-        <PrimaryButton className="hidden md:block" onClick={() => navigate('')}>Client Login</PrimaryButton>
+        <PrimaryButton className="hidden md:flex" onClick={() => navigate('')}>Client Login</PrimaryButton>
         <div
           className="sm:hidden cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
