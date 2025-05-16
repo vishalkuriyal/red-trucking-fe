@@ -1,24 +1,25 @@
 import circle from "../../assets/images/homeWhoWeAreText.png";
 import whiteTruck from "../../assets/images/whiteTruck.png";
 import PrimaryButton from "../common/PrimaryButton";
+import { motion } from "motion/react";
 
 const HomeWhoWeAre = () => {
   return (
-    <div className=" w-full bg-bg1 bg-cover">
-      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-[500px]">
-        <div className="flex justify-between items-end relative overflow-hidden pb-28">
-          <div className="anton-regular text-[#D30003] text-[128px] leading-[122px] relative w-[30%]">
+    <div className=" w-full bg-bg1 bg-cover overflow-hidden">
+      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-[250px] md:pt-[500px]">
+        <div className="flex flex-col md:flex-row justify-between md:items-end relative md:overflow-hidden pb-28">
+          <div className="anton-regular text-[#D30003] text-[128px] leading-[122px] relative md:w-[30%] mb-10 md:mb-0">
             WE
             <br /> ARE{" "}
             <img
               src={circle}
-              className="absolute -top-14 right-28 animate-spin-slow"
+              className="absolute -top-14 right-10 md:right-28 animate-spin-slow"
               alt=""
             />
           </div>
-          <div className="flex w-[70%]">
-            <div className="w-[70%]">
-              <h3 className="anton-regular text-5xl text-white mb-7">
+          <div className="flex md:w-[70%]">
+            <div className="md:w-[70%]">
+              <h3 className="anton-regular text-4xl md:text-5xl text-white mb-7">
                 TRUSTED TRUCKING AND LOGISTICS ACROSS
                 <span className="text-primary"> 48 STATES</span>
               </h3>
@@ -33,8 +34,10 @@ const HomeWhoWeAre = () => {
               <PrimaryButton>Learn More</PrimaryButton>
             </div>
           </div>
-          <div className=" absolute -top-10 -right-10">
-            <img src={whiteTruck} className="h-[500px]" />
+          <div className=" absolute bottom-8 md:bottom-0 md:-top-10 -right-10">
+            <motion.img initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }} src={whiteTruck} className=" h-[200px] md:h-[500px]" />
           </div>
         </div>
       </div>

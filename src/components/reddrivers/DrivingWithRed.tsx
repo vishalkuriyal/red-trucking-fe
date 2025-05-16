@@ -31,17 +31,17 @@ const DrivingWithRed = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 pt-8 pb-8 md:pt-28 md:pb-14">
-        <div className="flex justify-between mb-28">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-0 justify-between mb-28">
           <h3 className="text-white anton-regular text-4xl">
             DRIVING <span className="text-primary">WITH R.E.D.</span>
           </h3>
-          <p className="font-kindsans-regular text-white w-[50%]">
+          <p className="font-kindsans-regular text-white md:w-[50%]">
             Led by a team of experienced drivers, we know what matters most to
             you on the road. Here, every driver is valued like family and
             supported with the right tools, flexibility, and respect to succeed.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-7">
+        <div className="grid md:grid-cols-3 gap-7">
           {cards.map((card, idx) => (
             <div className="" key={idx}>
               <div className="bg-primary py-6 px-10">

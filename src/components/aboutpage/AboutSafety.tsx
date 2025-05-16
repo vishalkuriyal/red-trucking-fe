@@ -3,11 +3,11 @@ import bg from "../../assets/images/aboutSafetyBg.png";
 const AboutSafety = () => {
   return (
     <div className="bg-secondary">
-      <div className="h-[500px] overflow-hidden">
+      <div className="md:h-[500px] overflow-hidden">
         <img className="h-full w-full object-cover object-bottom" src={bg} />
       </div>
       <div className="relative max-w-screen-2xl mx-auto px-5 md:px-20">
-        <h3 className="anton-regular text-[128px] leading-[114px] gradient-stroke-white absolute -top-10">
+        <h3 className="anton-regular text-7xl md:text-[128px] md:leading-[114px] gradient-stroke-white absolute -top-10">
           SAFETY
         </h3>
         <div className="py-8 md:py-0 md:pb-28">
@@ -17,7 +17,7 @@ const AboutSafety = () => {
             driver. We provide safety meetings, programs and workshops to ensure
             accidents are avoided as far as possible.
           </p>
-          <p className="border border-[#3C3C3C] py-7 px-10 font-kindsans-regular text-[#f5f5f5]">
+          <p className="border border-[#3C3C3C] py-7 px-5 md:px-10 font-kindsans-regular text-[#f5f5f5]">
             In the transportation business, drivers are the key and we ensure
             that their performance always remains well above the standards. For
             this purpose several workshops, safety meetings, drills and

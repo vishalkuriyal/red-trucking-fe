@@ -4,12 +4,12 @@ const AboutWhatWeDo = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
-        <h3 className="anton-regular text-[128px] leading-[114px] gradient-stroke mb-8">
+        <h3 className="anton-regular text-5xl md:text-[128px] md:leading-[114px] gradient-stroke mb-8">
           WHAT WE DO
         </h3>
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           {" "}
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col gap-8 md:gap-0 justify-between">
             <p className="anton-regular text-white text-4xl leading-[38px]">
               WE DELIVER SMART AND
               <br /> <span className="text-primary">DEPENDABLE lOGISTICS</span>
@@ -24,7 +24,7 @@ const AboutWhatWeDo = () => {
               </div>
             </div>
           </div>
-          <p className="font-kindsans-regular w-[50%] text-white text-xl">
+          <p className="font-kindsans-regular md:w-[50%] text-white text-xl">
             We go beyond transportation by offering tech-enabled logistics with
             a human touch. Our real-time tracking, automated dispatching, and
             live updates keep you informed at every step. Whether you're moving
@@ -34,8 +34,8 @@ const AboutWhatWeDo = () => {
           </p>
         </div>
       </div>
-      <div className=" pb-28">
-        <img className="w-full h-[500px] object-cover" src={ bg} alt=""/>
+      <div className="pb-8 md:pb-28">
+        <img className="w-full md:h-[500px] object-cover" src={ bg} alt=""/>
       </div>
     </div>
   );

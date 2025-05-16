@@ -62,10 +62,10 @@ const Journey = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-14">
-        <h3 className="anton-regular text-white text-4xl uppercase mb-14">
+        <h3 className="anton-regular text-white text-3xl md:text-4xl uppercase mb-6 md:mb-14">
           <span className="text-primary">facilities</span> that fuel the journey
         </h3>
-        <div className="grid grid-cols-3 gap-7">
+        <div className="grid md:grid-cols-3 gap-7">
           {cards.map((card, idx) => (
             <div className="border border-[#3c3c3c] py-10 px-8" key={idx}>
               <div className="flex justify-between mb-5">

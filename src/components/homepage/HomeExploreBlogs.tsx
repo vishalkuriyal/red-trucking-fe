@@ -4,9 +4,9 @@ const HomeExploreBlogs = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28 flex justify-between">
-        <div className="w-[25%] flex flex-col justify-between">
+        <div className="md:w-[25%] flex flex-col justify-between">
           <div>
-            <h3 className="text-white anton-regular text-[64px] leading-[66px] mb-8">
+            <h3 className="text-white anton-regular text-4xl md:text-[64px] md:leading-[66px] mb-8">
               <span className="text-primary">EXPLORE</span> <br />
               OUR BLOGS
             </h3>
@@ -22,7 +22,6 @@ const HomeExploreBlogs = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-10">
-          
         </div>
       </div>
     </div>

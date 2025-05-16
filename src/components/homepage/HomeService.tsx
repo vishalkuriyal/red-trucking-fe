@@ -43,16 +43,16 @@ const services: ServiceTypeProps[] = [
 const HomeService = () => {
   return (
     <div className="bg-bg1 bg-cover">
-      <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
-        <div className="flex justify-between items-end mb-16">
-          <h3 className="anton-regular text-white text-[64px] leading-[66px]">
+      <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-10 md:py-28">
+        <div className="flex flex-col md:flex-row justify-between md:items-end mb-16">
+          <h3 className="anton-regular text-white text-4xl md:text-[64px] md:leading-[66px] mb-6 md:mb-0">
             <span className="text-primary">OUR</span>
             <br />
             SERVICES
           </h3>
           <PrimaryButton>Learn More</PrimaryButton>
         </div>
-        <div className="grid md:grid-cols-4 gap-[14px]">
+        <div className="grid md:grid-cols-4 gap-20 md:gap-[14px] pb-10 md:pb-0">
           {services.map((service, index) => (
             <Link
               to={service.path}

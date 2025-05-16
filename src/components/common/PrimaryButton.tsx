@@ -8,7 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const PrimaryButton = ({ className, children, ...props }: ButtonProps) => {
   return (
-    <button className="hidden sm:flex group items-center gap-4 cursor-pointer" {...props}>
+    <button className={`flex group items-center gap-4 cursor-pointer ${className}`} {...props}>
       <p className="font-kindsans-semibold text-white">{children}</p>
       <div className="size-10 flex justify-center items-center border border-white rounded-full group-hover:bg-white transition-all duration-500">
         <svg

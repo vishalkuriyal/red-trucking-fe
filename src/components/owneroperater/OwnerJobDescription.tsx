@@ -2,13 +2,13 @@ const OwnerJobDescription = ({ handleApplyNowClick }: any) => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-between">
           <div className="">
             <h5 className="anton-regular text-4xl text-white uppercase">
               job <span className="text-primary">description</span>
             </h5>
           </div>
-          <div className="w-[55%]">
+          <div className="md:w-[55%]">
             <p className="font-kindsans-medium text-xl text-white mb-11 w-full">
               This is an intermodal driving position operating within a 250-mile
               radius of the Newark/Elizabeth ports. Drivers work Monday to

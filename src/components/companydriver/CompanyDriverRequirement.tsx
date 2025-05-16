@@ -5,9 +5,9 @@ const CompanyDriverRequirement = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto pr-5 md:pr-20 py-8 md:py-14">
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-0 justify-between">
           <img src={requirement} alt="" className="" />
-          <div className="w-[50%] border border-[#3c3c3c] py-11 px-9">
+          <div className="md:w-[50%] border border-[#3c3c3c] py-11 px-9">
             <h5 className="anton-regular text-4xl text-white uppercase mb-6">
               requirements
             </h5>
@@ -48,7 +48,7 @@ const CompanyDriverRequirement = () => {
         </div>
       </div>
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 pb-8 md:pb-28">
-        <div className="border border-[#3c3c3c] grid grid-cols-2 md:gap-28">
+        <div className="border border-[#3c3c3c] grid md:grid-cols-2 md:gap-28">
           <div className="py-11 px-9">
             <h5 className="anton-regular text-4xl text-white uppercase mb-6">
               Benefits
