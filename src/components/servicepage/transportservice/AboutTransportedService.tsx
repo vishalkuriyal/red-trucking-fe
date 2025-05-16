@@ -28,7 +28,7 @@ const AboutTransportedService = () => {
           </div>
         </div>
       </div>
-      <div className="bg-bg3 object-cover relative">
+      <div className="bg-bg3 bg-cover relative">
         <div className="h-full w-full absolute top-0 left-0 bg-gradient-to-r from-black to-transparent"></div>
         <div className="relative z-10 py-14 max-w-screen-2xl mx-auto px-5 sm:px-20">
           <div className="w-[30%]">
