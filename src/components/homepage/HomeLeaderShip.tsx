@@ -43,16 +43,16 @@ const HomeLeaderShip = () => {
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
         <div className="flex justify-between items-end mb-16">
-          <h3 className="anton-regular text-[64px] leading-[66px] text-white">
+          <h3 className="anton-regular text-4xl md:text-[64px] md:leading-[66px] text-white">
             <span className="text-primary">LEADERSHIP</span> <br />
             TEAM
           </h3>
-          <h3 className="anton-regular text-[64px] leading-[66px] text-white">
+          <h3 className="anton-regular text-4xl md:text-[64px] md:leading-[66px] text-white">
             TEAM <br />
             <span className="gradient-stroke">TEAM</span>
           </h3>
         </div>
-        <div className="grid grid-cols-5 justify-between gap-10">
+        <div className="grid md:grid-cols-5 md:justify-between gap-32 md:gap-10 pb-32 md:pb-0">
           {teams.map((team, idx) => (
             <div className="group relative h-[323px]" key={idx}>
               <div className="h-[80%]">

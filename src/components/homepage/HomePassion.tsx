@@ -8,9 +8,9 @@ const HomePassion = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
-        <div className="flex justify-between items-end mb-16">
-          <div className="w-[50%]">
-            <h3 className="anton-regular text-[64px] leading-[66px] text-white">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div className="md:w-[50%] mb-4 md:mb-0">
+            <h3 className="anton-regular text-4xl md:text-[64px] md:leading-[66px] text-white">
               POWERED <span className="text-primary">BY PASSION</span>
             </h3>
             <p className="text-white anton-regular text-2xl leading-[37px]">
@@ -18,7 +18,7 @@ const HomePassion = () => {
               X BULLDOGS SC
             </p>
           </div>
-          <div className="w-[50%]">
+          <div className="md:w-[50%]">
             <p className="font-kindsans-regular text-white">
               R.E.D. Trucking & Logistics proudly fuels the spirit of Bulldogs
               SC! As official sponsors, we stand behind their drive, dedication

@@ -2,13 +2,13 @@ const AboutOwnerOperator = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20">
-        <h3 className="anton-regular text-[128px] leading-[114px] gradient-stroke-primary absolute -top-10 uppercase">
+        <h3 className="anton-regular text-5xl md:text-[128px] md:leading-[114px] gradient-stroke-primary absolute -top-10 uppercase">
           owner operator
         </h3>
       </div>
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-14">
-        <div className="flex justify-between mb-10">
-          <div className="w-[40%]">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-0 justify-between mb-10">
+          <div className="md:w-[40%]">
             <h4 className="anton-regular text-white text-4xl uppercase">
               SECURE YOUR CAREER WITH CDL
               <span className="text-primary">
@@ -17,7 +17,7 @@ const AboutOwnerOperator = () => {
               </span>
             </h4>
           </div>
-          <div className="w-[50%]">
+          <div className="md:w-[50%]">
             <p className="font-kindsans-regular text-white mb-5">
               We’re dedicated to helping our Owner Operators thrive, both on and
               off the road. From competitive income and solid health benefits to

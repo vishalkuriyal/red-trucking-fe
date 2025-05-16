@@ -4,15 +4,15 @@ const SharedSpace = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 mb-8 pt-8 md:pt-28">
-        <h3 className="anton-regular text-[128px] gradient-stroke">
+        <h3 className="anton-regular text-6xl md:text-[128px] gradient-stroke">
           SHARED STROKE
         </h3>
       </div>
-      <div className="flex justify-between items-center max-w-screen-2xl mx-auto pb-8 md:pb-28">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-0 justify-between items-center max-w-screen-2xl mx-auto pb-8 md:pb-28">
         <div className="">
           <img className="" src={img} alt="" />
         </div>
-        <div className="w-[50%]">
+        <div className="md:w-[50%] px-5 md:px-0">
           <p className="text-white font-kindsans-regular mb-11">
             Need space without a long-term commitment? Our Shared Space option
             gives you flexible storage based on your changing needs. It’s great

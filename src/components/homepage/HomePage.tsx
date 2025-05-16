@@ -28,9 +28,9 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative ">
         <HomePageHero />
-        <div className="absolute -bottom-[300px] mx-auto left-0 right-0 w-fit">
+        <div className="absolute -bottom-36 md:-bottom-[300px] mx-auto left-0 right-0 w-fit px-5">
           <div className="relative max-w-[800px] aspect-video">
             <video
               ref={videoRef}
@@ -43,13 +43,12 @@ const HomePage = () => {
             </video>
 
             {!isPlaying && (
-                <img
-                  src={videoSection}
-                  alt="Video Thumbnail"
-                  className="absolute top-0 w-full h-full"
-                  onClick={handlePlay}
-                />
-
+              <img
+                src={videoSection}
+                alt="Video Thumbnail"
+                className="absolute top-0 w-full h-full"
+                onClick={handlePlay}
+              />
             )}
           </div>
         </div>

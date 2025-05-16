@@ -185,7 +185,7 @@ const Navbar = () => {
             );
           })}
         </nav>
-        <PrimaryButton onClick={() => navigate('')}>Client Login</PrimaryButton>
+        <PrimaryButton className="hidden md:block" onClick={() => navigate('')}>Client Login</PrimaryButton>
         <div
           className="sm:hidden cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
@@ -194,7 +194,7 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="py-8 px-5 sm:hidden">
+        <div className="py-8 px-5 sm:hidden bg-black/40">
           {links.map((link, index) => {
             const isActive = location.pathname === link.path;
             return (

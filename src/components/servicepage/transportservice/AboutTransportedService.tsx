@@ -2,8 +2,8 @@ const AboutTransportedService = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-14">
-        <div className="flex justify-between mb-10">
-          <div className="w-[40%]">
+        <div className="flex flex-col md:flex-row justify-between mb-10 gap-8 md:gap-0">
+          <div className="md:w-[40%]">
             <h4 className="anton-regular text-white text-4xl">
               TRUCKING, TRANSPORT &
               <span className="text-primary">
@@ -12,7 +12,7 @@ const AboutTransportedService = () => {
               </span>
             </h4>
           </div>
-          <div className="w-[50%]">
+          <div className="md:w-[50%]">
             <p className="font-kindsans-regular text-white">
               At R.E.D. Trucking & Logistics, we take pride in moving your cargo
               with care, speed and precision. As a trusted name in the industry,
@@ -31,8 +31,8 @@ const AboutTransportedService = () => {
       <div className="bg-bg3 bg-cover relative">
         <div className="h-full w-full absolute top-0 left-0 bg-gradient-to-r from-black to-transparent"></div>
         <div className="relative z-10 py-14 max-w-screen-2xl mx-auto px-5 sm:px-20">
-          <div className="w-[30%]">
-            <h3 className="anton-regular text-white text-6xl mb-8">
+          <div className="md:w-[30%]">
+            <h3 className="anton-regular text-white text-5xl md:text-6xl mb-8">
               TRANSPORTATION <span className="text-primary">SERVICES</span>
             </h3>
             <div className="border-l-2 border-primary ">
