@@ -12,6 +12,8 @@ import OwnerOperater from "./components/owneroperater/OwnerOperater";
 import CompanyDriver from "./components/companydriver/CompanyDriver";
 import BlogPage from "./components/blogpage/BlogPage";
 import BlogPost from "./components/blogpage/BlogPost";
+import Contact from "./components/ui/Contact";
+
 
 function App() {
   return (
@@ -30,6 +32,9 @@ function App() {
           <Route path="/company-driver" element={<CompanyDriver />} />
           <Route path="/blogs" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPost/>} />
+          <Route path="/contact" element={<Contact/>} />
+     
+          
         </Routes>
         <Footer />
       </BrowserRouter>
