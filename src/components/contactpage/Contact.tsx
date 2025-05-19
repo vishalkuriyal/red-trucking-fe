@@ -304,10 +304,10 @@ const Contact = () => {
                       <Field
                         name="service"
                         as="select"
-                        className="w-full p-5 mt-1 outline-none text-white appearance-none bg-transparent border border-[#1D1D1D] pr-10"
+                        className="w-full p-5 mt-1 outline-none text-white appearance-none bg-secondary border border-[#1D1D1D] pr-10"
                       >
-                        <option value="" className="!text-white/10">Select a service</option>
-                        <option value="logistics" className="text-black">Logistics</option>
+                        <option value="" className="">Select a service</option>
+                        <option value="logistics" className="">Logistics</option>
                         <option value="sales">Sales</option>
                         <option value="support">Support</option>
                       </Field>
