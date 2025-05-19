@@ -6,8 +6,9 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import image from "../../assets/images/contactimg.png";
-import drop from "../../assets/svgs/donwarrow.svg"
-import clock from "../../assets/svgs/Clock.svg"
+import drop from "../../assets/svgs/donwarrow.svg";
+import clock from "../../assets/svgs/Clock.svg";
+import HomeLocation from "../homepage/HomeLocation";
 
 interface ContactItem {
   label: string;
@@ -20,6 +21,16 @@ interface CardData {
   title: string;
   items: ContactItem[];
 }
+
+// type ContactFormType = {
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+//   phoneNumber: string;
+//   message: string;
+//   service: "logistic" | "sales" | "support";
+//   bestTime: string;
+// };
 
 const Contact = () => {
   const data: CardData[] = [
@@ -117,6 +128,7 @@ const Contact = () => {
     },
   ];
 
+  
   const validationSchema = Yup.object({
     firstName: Yup.string().required("First Name is required"),
     lastName: Yup.string().required("Last Name is required"),
@@ -128,6 +140,7 @@ const Contact = () => {
     bestTime: Yup.string().required("Best Time to Connect is required"),
     message: Yup.string().required("Message is required"),
   });
+
 
   return (
     <>
@@ -197,12 +210,12 @@ const Contact = () => {
           <h3 className="anton-regular text-[128px] leading-[114px] gradient-stroke mb-20">
             SEND US A MESSAGE
           </h3>
-          <div className="flex gap-10">
-            <div className="w-full md:w-1/2">
+          <div className="flex  gap-20 h-full">
+            <div className="w-full md:w-1/2 h-full">
               <Formik
                 initialValues={{
                   firstName: "",
-                  lstName: "",
+                  lastName: "",
                   email: "",
                   phoneNumber: "",
                   service: "",
@@ -210,18 +223,34 @@ const Contact = () => {
                   message: "",
                 }}
                 validationSchema={validationSchema}
-                onSubmit={(values) => {
-                  console.log("Form Submitted:", values);
+                onSubmit={(values, actions) => {
+                  console.log("Form values:", values);
+
+                  // Here you would send the form data to your backend
+                  // handleSubmitToBackend(values);
+                  actions.resetForm({
+                    values: {
+                      firstName: "",
+                      lastName: "",
+                      phoneNumber: "",
+                      email: "",
+                      service: "logistic",
+                      bestTime: "",
+                      message: "",
+                    },
+                  });
                 }}
               >
-                <div className="flex flex-col md:flex-row gap-8 items-start">
-                  <Form className="grid grid-cols-1 md:grid-cols-2 gap-6 text-white">
+                <div className="flex flex-col md:flex-row gap-8 items-start ">
+                  <Form className="grid grid-cols-1 md:grid-cols-2 gap-6  text-white justify-between">
                     <div>
-                      <label htmlFor="firstName">First Name</label>
+                      <label className="" htmlFor="firstName">
+                        First Name
+                      </label>
                       <Field
                         name="firstName"
                         placeholder="First Name"
-                        className="w-full p-2 text-[#555555] bg-black border border-[#1D1D1D]"
+                        className="w-full p-5  text-[#555555] bg-black border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="firstName"
@@ -234,7 +263,7 @@ const Contact = () => {
                       <Field
                         name="lastName"
                         placeholder="Last Name"
-                        className="w-full p-2 text-[#555555] bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 text-[#555555] bg-black border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="lastName"
@@ -249,7 +278,7 @@ const Contact = () => {
                         name="email"
                         placeholder="Email"
                         type="email"
-                        className="w-full p-2 text-[#555555]   bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 text-[#555555]   bg-black border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="email"
@@ -263,7 +292,7 @@ const Contact = () => {
                       <Field
                         name="phoneNumber"
                         placeholder="Phone Number"
-                        className="w-full p-2 text-[#555555]  bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 text-[#555555]  bg-black border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="phoneNumber"
@@ -276,7 +305,7 @@ const Contact = () => {
                       <Field
                         name="service"
                         as="select"
-                        className="w-full p-2 text-[#555555] appearance-none bg-black border border-[#1D1D1D] pr-10"
+                        className="w-full p-5 text-[#555555] appearance-none bg-black border border-[#1D1D1D] pr-10"
                       >
                         <option value="">Select a service</option>
                         <option value="logistics">Logistics</option>
@@ -286,11 +315,7 @@ const Contact = () => {
 
                       {/* Custom dropdown icon (image or SVG) */}
                       <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2">
-                        <img
-                          src={drop}
-                          alt="dropdown icon"
-                          className="mt-6 mb-5"
-                        />
+                        <img src={drop} alt="dropdown icon" className="mt-6 " />
                       </div>
 
                       <ErrorMessage
@@ -300,20 +325,16 @@ const Contact = () => {
                       />
                     </div>
 
-                      <div className="Custom-Clock relative w-full">
+                    <div className="Custom-Clock relative w-full">
                       <label htmlFor="bestTime">Best Time to Connect</label>
                       <Field
                         name="bestTime"
                         placeholder="HH-MM-AM"
-                        className="w-full p-2 text-[#555555]  bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 text-[#555555]  bg-black border border-[#1D1D1D]"
                       />
                       {/* Custom dropdown icon (image or SVG) */}
                       <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2">
-                        <img
-                          src={clock}
-                          alt="dropdown icon"
-                          className="mt-6 mb-6"
-                        />
+                        <img src={clock} alt="dropdown icon" className="mt-6" />
                       </div>
                       <ErrorMessage
                         name="bestTime"
@@ -329,7 +350,7 @@ const Contact = () => {
                         placeholder="Type Message"
                         as="textarea"
                         rows={4}
-                        className="w-full p-2 text-[#555555] bg-black border border-[#1D1D1D]"
+                        className="w-full p-2 h-30 text-[#555555] bg-black border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="message"
@@ -338,7 +359,7 @@ const Contact = () => {
                       />
                     </div>
                     <div className="md:col-span-2">
-                      <button className="font-kindsans-bold flex group ml-6 mt-8">
+                      <button className="font-kindsans-bold flex group  mt-8">
                         <p className="py-4 px-5 bg-primary text-white">
                           Submit
                         </p>
@@ -364,29 +385,14 @@ const Contact = () => {
                 </div>
               </Formik>
             </div>
-            <div className="w-[45%]">
-              <div className="">
-                <img src={image} className="w-full " alt="" />
-              </div>
+            <div className="w-[40%] h-full">
+              <img src={image} className="w-full  border" alt="" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-screen-2xl mx-auto px-5 md:px-20 bg-black py-8 md:py-28">
-        <h3 className="anton-regular text-[40px] text-center text-white leading-[40px]">
-          FIND LOCATIONS
-        </h3>
-        <h3 className="anton-regular text-[40px] text-center text-white gradient-stroke leading-[40px]">
-          FIND LOCATIONS
-        </h3>
-        <h3 className="anton-regular text-[40px] text-center text-white gradient-stroke leading-[40px] mb-10">
-          FIND LOCATIONS
-        </h3>
-        <div className="flex justify-center items-center">
-          <img className="" alt="" src="/src/assets/svgs/map.svg"></img>
-        </div>
-      </div>
+      <HomeLocation />
     </>
   );
 };
