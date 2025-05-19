@@ -8,7 +8,7 @@ const HomeWhoWeAre = () => {
   const navigate = useNavigate()
   return (
     <div className=" w-full bg-bg1 bg-cover overflow-hidden">
-      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-[250px] md:pt-[500px]">
+      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-[250px] md:pt-[400px]">
         <div className="flex flex-col md:flex-row justify-between md:items-end relative md:overflow-hidden pb-28">
           <div className="anton-regular text-[#D30003] text-[128px] leading-[122px] relative md:w-[30%] mb-10 md:mb-0">
             WE

@@ -73,7 +73,7 @@ const ServiceHero = ({
           {otherServices.map((ser, idx) => (
             <Link
               to={ser.path}
-              className="bg-[#282828] p-2 group hover:bg-primary transition-all duration-500"
+              className="bg-[#282828] p-2 group hover:bg-primary transition-all duration-500 hover:scale-[1.10]"
               key={idx}
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >

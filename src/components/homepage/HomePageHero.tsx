@@ -49,7 +49,7 @@ const HomePageHero = () => {
               initial={{ x: 200, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1 }}
-              className="absolute md:right-28 md:top-0 bottom-0"
+              className="absolute md:right-28 md:top-32 bottom-0"
               src={truck}
             />
           </div>
