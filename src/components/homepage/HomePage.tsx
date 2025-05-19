@@ -31,7 +31,7 @@ const HomePage = () => {
       <div className="relative ">
         <HomePageHero />
         <div className="absolute -bottom-36 md:-bottom-[300px] mx-auto left-0 right-0 w-fit px-5">
-          <div className="relative w-[900px] max-h-[420px] aspect-video">
+          <div className="relative md:w-[900px] max-h-[420px] aspect-video">
             <video
               ref={videoRef}
               controls={false}
