@@ -12,7 +12,7 @@ import OwnerOperater from "./components/owneroperater/OwnerOperater";
 import CompanyDriver from "./components/companydriver/CompanyDriver";
 import BlogPage from "./components/blogpage/BlogPage";
 import BlogPost from "./components/blogpage/BlogPost";
-import Contact from "./components/ui/Contact";
+import Contact from "./components/contactpage/Contact";
 
 
 function App() {

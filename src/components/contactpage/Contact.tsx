@@ -1,8 +1,7 @@
 import bg from "../../assets/images/contactHeroBg.png";
-import LocationIcon from "../../assets/svgs/LocationIcon.svg";
+import LocationIcon from "../../assets/svgs/locationicon.svg";
 import MailIcon from "../../assets/svgs/mailicon.svg";
 import PhoneIcon from "../../assets/svgs/phoneicon.svg";
-import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import image from "../../assets/images/contactimg.png";
@@ -145,16 +144,16 @@ const Contact = () => {
   return (
     <>
       {/* Existing Header Section */}
-      <div className="bg-bg1 bg-cover md:pt-[130px]">
+      <div className="bg-secondary bg-cover pt-[80px] md:pt-[130px]">
         <div className="max-w-screen-2xl mx-auto px-5 sm:px-0 md:pl-20 py-8 sm:py-0 md:pt-8">
           <div className="relative">
             <p className="font-kindsans-medium text-white">
               HOME &gt; <span className="text-primary">Contact US</span>
             </p>
-            <h1 className="anton-regular text-white text-[40px] relative z-20">
+            <h1 className="anton-regular text-white text-3xl md:text-[40px] relative z-20">
               CONTACT US
             </h1>
-            <p className="gradient-stroke-primary anton-regular text-[72px] leading-[70px] relative bottom-8 z-10">
+            <p className="gradient-stroke-primary anton-regular text-5xl md:text-[72px] leading-[70px] relative bottom-8 z-10">
               Contact US
             </p>
           </div>
@@ -167,7 +166,7 @@ const Contact = () => {
       {/* Contact Title with large "CONTACT US" */}
       <div className="bg-secondary">
         <div className="max-w-screen-2xl mx-auto px-5 md:px-20 relative">
-          <h2 className="anton-regular text-[128px] leading-[120px] gradient-stroke-primary absolute left-0 -top-10">
+          <h2 className="anton-regular text-6xl md:text-[128px] md:leading-[120px] gradient-stroke-primary absolute left-0 -top-10">
             CONTACT US
           </h2>
         </div>
@@ -176,7 +175,7 @@ const Contact = () => {
       {/* Your existing return content ends here, now insert the cards */}
 
       {/* Cards Section */}
-      <div className="flex flex-wrap bg-black justify-center mt-0 shadow-none ">
+      <div className="flex flex-wrap bg-secondary justify-center mt-0 shadow-none py-8 md:py-14">
         {data.map((card, index) => (
           <div
             key={index}
@@ -194,7 +193,7 @@ const Contact = () => {
               {card.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-4 mb-4 border-b border-[#444446] py-2"
+                  className="flex items-center font-kindsans-regular gap-4 mb-4 border-b border-[#444446] py-2"
                 >
                   <img src={item.icon} alt={item.type} className="h-5 w-5" />
                   <p className="m-0">{item.value}</p>
@@ -207,10 +206,10 @@ const Contact = () => {
 
       <div className="bg-secondary">
         <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
-          <h3 className="anton-regular text-[128px] leading-[114px] gradient-stroke mb-20">
+          <h3 className="anton-regular text-7xl md:text-[128px] md:leading-[114px] gradient-stroke mb-20">
             SEND US A MESSAGE
           </h3>
-          <div className="flex  gap-20 h-full">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-20 h-full">
             <div className="w-full md:w-1/2 h-full">
               <Formik
                 initialValues={{
@@ -250,7 +249,7 @@ const Contact = () => {
                       <Field
                         name="firstName"
                         placeholder="First Name"
-                        className="w-full p-5  text-[#555555] bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 mt-1 outline-none  text-white bg-transparent border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="firstName"
@@ -263,7 +262,7 @@ const Contact = () => {
                       <Field
                         name="lastName"
                         placeholder="Last Name"
-                        className="w-full p-5 text-[#555555] bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 mt-1 outline-none text-white bg-transparent border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="lastName"
@@ -278,7 +277,7 @@ const Contact = () => {
                         name="email"
                         placeholder="Email"
                         type="email"
-                        className="w-full p-5 text-[#555555]   bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 mt-1 outline-none text-white   bg-transparent border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="email"
@@ -292,7 +291,7 @@ const Contact = () => {
                       <Field
                         name="phoneNumber"
                         placeholder="Phone Number"
-                        className="w-full p-5 text-[#555555]  bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 mt-1 outline-none text-white  bg-transparent border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="phoneNumber"
@@ -305,10 +304,10 @@ const Contact = () => {
                       <Field
                         name="service"
                         as="select"
-                        className="w-full p-5 text-[#555555] appearance-none bg-black border border-[#1D1D1D] pr-10"
+                        className="w-full p-5 mt-1 outline-none text-white appearance-none bg-transparent border border-[#1D1D1D] pr-10"
                       >
-                        <option value="">Select a service</option>
-                        <option value="logistics">Logistics</option>
+                        <option value="" className="!text-white/10">Select a service</option>
+                        <option value="logistics" className="text-black">Logistics</option>
                         <option value="sales">Sales</option>
                         <option value="support">Support</option>
                       </Field>
@@ -330,7 +329,7 @@ const Contact = () => {
                       <Field
                         name="bestTime"
                         placeholder="HH-MM-AM"
-                        className="w-full p-5 text-[#555555]  bg-black border border-[#1D1D1D]"
+                        className="w-full p-5 mt-1 outline-none text-white  bg-transparent border border-[#1D1D1D]"
                       />
                       {/* Custom dropdown icon (image or SVG) */}
                       <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2">
@@ -350,7 +349,7 @@ const Contact = () => {
                         placeholder="Type Message"
                         as="textarea"
                         rows={4}
-                        className="w-full p-2 h-30 text-[#555555] bg-black border border-[#1D1D1D]"
+                        className="w-full p-2 mt-1 h-30 text-white bg-transparent border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="message"
@@ -359,7 +358,7 @@ const Contact = () => {
                       />
                     </div>
                     <div className="md:col-span-2">
-                      <button className="font-kindsans-bold flex group  mt-8">
+                      <button className="font-kindsans-bold flex group  md:mt-8">
                         <p className="py-4 px-5 bg-primary text-white">
                           Submit
                         </p>
@@ -385,7 +384,7 @@ const Contact = () => {
                 </div>
               </Formik>
             </div>
-            <div className="w-[40%] h-full">
+            <div className="md:w-[40%] h-full">
               <img src={image} className="w-full  border" alt="" />
             </div>
           </div>

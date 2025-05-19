@@ -92,7 +92,7 @@ const Footer = () => {
             </a>
             <a href="" className="flex flex-col md:flex-row gap-5 items-center text-center md:items-start">
               <img src={address} className="" alt="" />
-              <p className="font-kindsans-regular text-lg text-white">
+              <p className="font-kindsans-regular text-lg text-white md:text-left">
                 R.E.D. Trucking & Logistics HQ
                 <br />
                 158 Paris St, Newark, NJ 07105, United States

@@ -75,29 +75,29 @@ const OwnerOperatorForm: React.FC = () => {
       // Here you would send the form data to your backend
       // handleSubmitToBackend(values);
       formik.resetForm({
-          values: {
-            firstName: '',
-            lastName: '',
-            phoneNumber: '',
-            email: '',
-            terminal: 'Newark (NY/NJ)',
-            cdlA: '',
-            yearObtainedCdlA: '',
-            hasTwic: '',
-            portExperience: '',
-            portExperienceYears: '',
-            hazMat: '',
-            isWillingToGetHazMat: '',
-            etc: '',
-            addressLine1: '',
-            addressLine2: '',
-            country: 'United States',
-            city: '',
-            stateProvince: '',
-            zipCode: '',
-            receivesCommunication: false,
-          }
-        });
+        values: {
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          email: "",
+          terminal: "Newark (NY/NJ)",
+          cdlA: "",
+          yearObtainedCdlA: "",
+          hasTwic: "",
+          portExperience: "",
+          portExperienceYears: "",
+          hazMat: "",
+          isWillingToGetHazMat: "",
+          etc: "",
+          addressLine1: "",
+          addressLine2: "",
+          country: "United States",
+          city: "",
+          stateProvince: "",
+          zipCode: "",
+          receivesCommunication: false,
+        },
+      });
     },
   });
 

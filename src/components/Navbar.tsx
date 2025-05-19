@@ -220,8 +220,10 @@ const Navbar = () => {
               <div className="group mb-4 w-fit">
                 <Link
                   to={link.path}
-                  onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  onClick={() =>{
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    setIsOpen(false)
+                    }
                   }
                   className={`${
                     isActive
