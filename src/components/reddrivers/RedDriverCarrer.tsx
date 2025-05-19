@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import img from "../../assets/images/redDriverCarreImg.png";
 import icon from "../../assets/svgs/icon.svg";
 
 const RedDriverCarrer = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto py-8 md:py-0 md:pt-14 md:pb-28">
@@ -59,7 +61,13 @@ const RedDriverCarrer = () => {
                 </div>
               </div>
             </div>
-            <button className="font-kindsans-bold flex group mt-8">
+            <button
+              className="font-kindsans-bold flex group mt-8"
+              onClick={() => {
+                navigate("/company-driver");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
               <p className="py-4 px-5 bg-primary text-white">Apply Now</p>
               <div className="bg-[#D00003] p-[10px]">
                 <div className="size-10 flex justify-center items-center border border-white rounded-full group-hover:bg-white transition-all duration-500">

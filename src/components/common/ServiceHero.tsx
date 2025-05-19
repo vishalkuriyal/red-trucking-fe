@@ -31,7 +31,7 @@ const otherServices: OtherServiceType[] = [
   {
     name: "LOGISTICS",
     icon: logistics,
-    path: "/logistics",
+    path: "/logistic",
   },
   {
     name: "TRANSLOADING",

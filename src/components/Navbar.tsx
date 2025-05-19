@@ -87,7 +87,7 @@ const Navbar = () => {
             Follow Us:
             <hr className="h-[2px] bg-white border-none w-10" />
             <div className="flex gap-3 items-center">
-              <a href="">
+              <a href="https://www.instagram.com/redtrucking/" target="_blank">
                 <svg
                   width="13"
                   height="13"
@@ -101,7 +101,7 @@ const Navbar = () => {
                   />
                 </svg>
               </a>
-              <a href="">
+              <a href="http://facebook.com/NJREDTrucking" target="_blank">
                 <svg
                   width="14"
                   height="13"
@@ -115,7 +115,7 @@ const Navbar = () => {
                   />
                 </svg>
               </a>
-              <a href="" className="">
+              <a href="https://www.linkedin.com/company/red-trucking/" className="" target="_blank">
                 <svg
                   width="13"
                   height="13"

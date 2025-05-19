@@ -127,7 +127,6 @@ const Contact = () => {
     },
   ];
 
-  
   const validationSchema = Yup.object({
     firstName: Yup.string().required("First Name is required"),
     lastName: Yup.string().required("Last Name is required"),
@@ -139,7 +138,6 @@ const Contact = () => {
     bestTime: Yup.string().required("Best Time to Connect is required"),
     message: Yup.string().required("Message is required"),
   });
-
 
   return (
     <>
@@ -270,7 +268,6 @@ const Contact = () => {
                         className="text-red-500"
                       />
                     </div>
-
                     <div>
                       <label htmlFor="email">Email</label>
                       <Field
@@ -306,8 +303,12 @@ const Contact = () => {
                         as="select"
                         className="w-full p-5 mt-1 outline-none text-white appearance-none bg-secondary border border-[#1D1D1D] pr-10"
                       >
-                        <option value="" className="">Select a service</option>
-                        <option value="logistics" className="">Logistics</option>
+                        <option value="" className="">
+                          Select a service
+                        </option>
+                        <option value="logistics" className="">
+                          Logistics
+                        </option>
                         <option value="sales">Sales</option>
                         <option value="support">Support</option>
                       </Field>
@@ -349,7 +350,7 @@ const Contact = () => {
                         placeholder="Type Message"
                         as="textarea"
                         rows={4}
-                        className="w-full p-2 mt-1 h-30 text-white bg-transparent border border-[#1D1D1D]"
+                        className="w-full p-2 mt-1 h-30 outline-none text-white bg-transparent border border-[#1D1D1D]"
                       />
                       <ErrorMessage
                         name="message"
