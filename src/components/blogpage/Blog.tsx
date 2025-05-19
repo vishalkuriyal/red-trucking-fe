@@ -1,5 +1,3 @@
-import React from "react";
-
 import { BlogType } from "../../types/type";
 import PrimaryButton from "../common/PrimaryButton";
 import { useNavigate } from "react-router-dom";
