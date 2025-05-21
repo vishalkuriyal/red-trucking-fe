@@ -71,7 +71,6 @@ const links: LinkType[] = [
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
 
   // Track scroll position to change background and visibility
   const [scrolled, setScrolled] = useState(false);
