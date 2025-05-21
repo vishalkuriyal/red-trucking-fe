@@ -2,7 +2,7 @@ import logo from "../assets/svgs/logo.svg";
 import hamburger from "../assets/svgs/hamburger.svg";
 import downarrow from "../assets/svgs/donwarrow.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import PrimaryButton from "./common/PrimaryButton";
 
 type LinkType = {
@@ -72,10 +72,50 @@ const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  // const [isServiceOpen, setIsServiceOpen] = useState(false);
+
+  // Track scroll position to change background and visibility
+  const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+
+  // Store previous scroll position
+  const lastScrollY = useRef(0);
+
+  // Add scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Change background when scrolled past a threshold (e.g., 50px)
+      const isScrolled = currentScrollY > 50;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+
+      // Show navbar when scrolling up, hide when scrolling down
+      if (currentScrollY < lastScrollY.current || currentScrollY < 50) {
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        setVisible(false);
+      }
+
+      // Update last scroll position
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
 
   return (
-    <div className="bg-transparent fixed top-0 w-full z-50">
+    <div
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-black" : "bg-transparent"
+      } ${visible ? "top-0" : "-top-full"}`}
+    >
       <div className="border-b border-[#929292] hidden sm:block">
         <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 flex justify-between py-2">
           <div className="flex items-center gap-5 text-white font-kindsans-regular">
@@ -115,7 +155,11 @@ const Navbar = () => {
                   />
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/company/red-trucking/" className="" target="_blank">
+              <a
+                href="https://www.linkedin.com/company/red-trucking/"
+                className=""
+                target="_blank"
+              >
                 <svg
                   width="13"
                   height="13"
@@ -133,7 +177,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-5 flex justify-between items-center">
+      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 py-5 flex justify-between items-center">
         <Link
           to={"/"}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -145,11 +189,8 @@ const Navbar = () => {
             // Check if link has service property
             if (link.service) {
               return (
-                <div className="group relative">
-                  <div
-                    key={index}
-                    className="font-kindsans-regular text-white flex gap-2 cursor-pointer"
-                  >
+                <div className="group relative" key={index}>
+                  <div className="font-kindsans-regular text-white flex gap-2 cursor-pointer">
                     {link.name}{" "}
                     <img src={downarrow} alt="services" className="" />
                   </div>
@@ -198,10 +239,7 @@ const Navbar = () => {
         </nav>
         <PrimaryButton
           className="hidden md:flex"
-          onClick={() => {
-            navigate("");
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
+          onClick={() => window.open("https://red.activetrac.net/")}
         >
           Client Login
         </PrimaryButton>
@@ -213,24 +251,26 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="py-8 px-5 sm:hidden bg-black/40">
+        <div
+          className={`py-8 px-5 sm:hidden ${
+            scrolled ? "bg-black" : "bg-black/40"
+          }`}
+        >
           {links.map((link, index) => {
             const isActive = location.pathname === link.path;
             return (
-              <div className="group mb-4 w-fit">
+              <div className="group mb-4 w-fit" key={index}>
                 <Link
                   to={link.path}
-                  onClick={() =>{
+                  onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
-                    setIsOpen(false)
-                    }
-                  }
+                    setIsOpen(false);
+                  }}
                   className={`${
                     isActive
                       ? "font-kindsans-semibold"
                       : "font-kindsans-regular"
                   } text-white text-base`}
-                  key={index}
                 >
                   {link.name}
                 </Link>

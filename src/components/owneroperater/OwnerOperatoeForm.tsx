@@ -72,6 +72,10 @@ const OwnerOperatorForm: React.FC = () => {
     }),
     onSubmit: (values) => {
       console.log("Form values:", values);
+
+      window.open(
+        "https://intelliapp.driverapponline.com/c/horizonfreightsystem?r=RED&uri_b=ia_horizonfreightsystem_1349355994"
+      );
       // Here you would send the form data to your backend
       // handleSubmitToBackend(values);
       formik.resetForm({
