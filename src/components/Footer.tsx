@@ -84,13 +84,19 @@ const Footer = () => {
                  INFO@REDTRUCKING.COM
               </p>
             </a>
-            <a href="tel:9737321333" className="flex flex-col md:flex-row gap-5 items-center text-center md:items-start">
+            <a
+              href="tel:9737321333"
+              className="flex flex-col md:flex-row gap-5 items-center text-center md:items-start"
+            >
               <img src={phone} className="" alt="" />
               <p className="font-kindsans-regular text-lg text-white">
                 973-732-1333 | 973-679-6844
               </p>
             </a>
-            <a href="" className="flex flex-col md:flex-row gap-5 items-center text-center md:items-start">
+            <a
+              href=""
+              className="flex flex-col md:flex-row gap-5 items-center text-center md:items-start"
+            >
               <img src={address} className="" alt="" />
               <p className="font-kindsans-regular text-lg text-white md:text-left">
                 R.E.D. Trucking & Logistics HQ
@@ -110,6 +116,9 @@ const Footer = () => {
                 <Link
                   to={link.path}
                   key={index}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                   className="font-kindsans-regular text-white text-xl"
                 >
                   {link.name}
@@ -124,6 +133,9 @@ const Footer = () => {
                 <Link
                   to={link.path}
                   key={index}
+                   onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                   className="font-kindsans-regular text-white text-xl"
                 >
                   {link.name}
