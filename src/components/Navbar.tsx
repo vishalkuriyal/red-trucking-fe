@@ -1,7 +1,7 @@
 import logo from "../assets/svgs/logo.svg";
 import hamburger from "../assets/svgs/hamburger.svg";
 import downarrow from "../assets/svgs/donwarrow.svg";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import PrimaryButton from "./common/PrimaryButton";
 
