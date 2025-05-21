@@ -7,7 +7,7 @@ import OwnerOperatorHero from "./OwnerOperatorHero";
 import Requirement from "./Requirement";
 
 const OwnerOperater = () => {
-   const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   const handleApplyNowClick = () => {
     setShowForm(true);
@@ -15,8 +15,8 @@ const OwnerOperater = () => {
   return (
     <div>
       <OwnerOperatorHero />
-      <AboutOwnerOperator />
-      
+      <AboutOwnerOperator handleApplyNowClick={handleApplyNowClick} />
+
       {showForm ? (
         <OwnerOperatorForm />
       ) : (
@@ -25,7 +25,7 @@ const OwnerOperater = () => {
           <OwnerJobDescription handleApplyNowClick={handleApplyNowClick} />
         </>
       )}
-      
+
       <HomeContactUs />
     </div>
   );

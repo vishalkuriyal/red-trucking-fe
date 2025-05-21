@@ -112,7 +112,7 @@ const Navbar = () => {
   return (
     <div
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black" : "bg-transparent"
+        scrolled ? "bg-secondary" : "bg-transparent"
       } ${visible ? "top-0" : "-top-full"}`}
     >
       <div className="border-b border-[#929292] hidden sm:block">

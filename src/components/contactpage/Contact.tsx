@@ -204,7 +204,7 @@ const Contact = () => {
 
       <div className="bg-secondary">
         <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
-          <h3 className="anton-regular text-7xl md:text-[128px] md:leading-[114px] gradient-stroke mb-20">
+          <h3 className="anton-regular text-7xl md:text-[128px] md:leading-[114px] gradient-stroke-other mb-20">
             SEND US A MESSAGE
           </h3>
           <div className="flex flex-col md:flex-row gap-8 md:gap-20 h-full">
@@ -247,7 +247,7 @@ const Contact = () => {
                       <Field
                         name="firstName"
                         placeholder="First Name"
-                        className="w-full p-5 mt-1 outline-none  text-white bg-transparent border border-[#1D1D1D]"
+                        className="w-full p-5 mt-2 outline-none  text-white bg-transparent border border-[#D9D9D9]/30"
                       />
                       <ErrorMessage
                         name="firstName"
@@ -260,7 +260,7 @@ const Contact = () => {
                       <Field
                         name="lastName"
                         placeholder="Last Name"
-                        className="w-full p-5 mt-1 outline-none text-white bg-transparent border border-[#1D1D1D]"
+                        className="w-full p-5 mt-2 outline-none text-white bg-transparent border border-[#D9D9D9]/30"
                       />
                       <ErrorMessage
                         name="lastName"
@@ -274,7 +274,7 @@ const Contact = () => {
                         name="email"
                         placeholder="Email"
                         type="email"
-                        className="w-full p-5 mt-1 outline-none text-white   bg-transparent border border-[#1D1D1D]"
+                        className="w-full p-5 mt-2 outline-none text-white   bg-transparent border border-[#D9D9D9]/30"
                       />
                       <ErrorMessage
                         name="email"
@@ -288,7 +288,7 @@ const Contact = () => {
                       <Field
                         name="phoneNumber"
                         placeholder="Phone Number"
-                        className="w-full p-5 mt-1 outline-none text-white  bg-transparent border border-[#1D1D1D]"
+                        className="w-full p-5 mt-2 outline-none text-white  bg-transparent border border-[#D9D9D9]/30"
                       />
                       <ErrorMessage
                         name="phoneNumber"
@@ -301,7 +301,7 @@ const Contact = () => {
                       <Field
                         name="service"
                         as="select"
-                        className="w-full p-5 mt-1 outline-none text-white appearance-none bg-secondary border border-[#1D1D1D] pr-10"
+                        className="w-full p-5 mt-2 outline-none text-white appearance-none bg-secondary border border-[#D9D9D9]/30 pr-10"
                       >
                         <option value="" className="">
                           Select a service
@@ -330,7 +330,7 @@ const Contact = () => {
                       <Field
                         name="bestTime"
                         placeholder="HH-MM-AM"
-                        className="w-full p-5 mt-1 outline-none text-white  bg-transparent border border-[#1D1D1D]"
+                        className="w-full p-5 mt-2 outline-none text-white  bg-transparent border border-[#D9D9D9]/30"
                       />
                       {/* Custom dropdown icon (image or SVG) */}
                       <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2">
@@ -350,7 +350,7 @@ const Contact = () => {
                         placeholder="Type Message"
                         as="textarea"
                         rows={4}
-                        className="w-full p-2 mt-1 h-30 outline-none text-white bg-transparent border border-[#1D1D1D]"
+                        className="w-full p-2 mt-2 h-30 outline-none text-white bg-transparent border border-[#D9D9D9]/30"
                       />
                       <ErrorMessage
                         name="message"
