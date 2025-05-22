@@ -17,7 +17,7 @@ const DrivingOpportunity = () => {
     };
   return (
     <div className="bg-bg1 bg-cover bg-no-repeat">
-      <div className="max-w-screen-2xl mx-auto px-5 md:px-20">
+      <div className="max-w-screen-2xl mx-auto px-5 md:px-20 hidden sm:block">
         <h3 className="anton-regular text-6xl md:text-[128px] md:leading-[114px] gradient-stroke-primary absolute -top-10">
           R.E.D Drivers
         </h3>

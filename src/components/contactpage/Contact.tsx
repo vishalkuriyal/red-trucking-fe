@@ -163,7 +163,7 @@ const Contact = () => {
 
       {/* Contact Title with large "CONTACT US" */}
       <div className="bg-secondary">
-        <div className="max-w-screen-2xl mx-auto px-5 md:px-20 relative">
+        <div className="max-w-screen-2xl mx-auto px-5 md:px-20 relative hidden sm:block">
           <h2 className="anton-regular text-6xl md:text-[128px] md:leading-[120px] gradient-stroke-primary absolute left-0 -top-10">
             CONTACT US
           </h2>

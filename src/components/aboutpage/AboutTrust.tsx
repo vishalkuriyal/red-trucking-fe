@@ -4,7 +4,7 @@ import client from "../../assets/images/aboutTrustClient.png";
 const AboutTrust = () => {
   return (
     <div className="bg-secondary">
-      <div className="max-w-screen-2xl mx-auto px-5 md:px-20 relative">
+      <div className="max-w-screen-2xl mx-auto px-5 md:px-20 relative hidden sm:block">
         <h2 className="anton-regular text-7xl md:text-[128px] md:leading-[120px] gradient-stroke-white absolute left-0 -top-10">
           ABOUT US
         </h2>

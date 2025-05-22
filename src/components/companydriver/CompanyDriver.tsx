@@ -20,7 +20,7 @@ const CompanyDriver = () => {
       ) : (
         <>
           <CompanyDriverRequirement />
-          <OwnerJobDescription handleApplyNowClick={handleApplyNowClick} />
+          <OwnerJobDescription handleApplyNowClick={handleApplyNowClick} /> 
         </>
       )}
     </div>

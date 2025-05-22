@@ -71,10 +71,11 @@ const links: LinkType[] = [
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isServiceOpen, setIsServiceOpen] = useState(false);
   // Track scroll position to change background and visibility
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
+  const hamburgerRef = useRef<HTMLDivElement>(null);
 
   // Store previous scroll position
   const lastScrollY = useRef(0);
@@ -108,6 +109,19 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <div
@@ -176,7 +190,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 py-5 flex justify-between items-center">
+      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 py-5 flex justify-between items-center" ref={hamburgerRef}>
         <Link
           to={"/"}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -252,10 +266,42 @@ const Navbar = () => {
       {isOpen && (
         <div
           className={`py-8 px-5 sm:hidden ${
-            scrolled ? "bg-black" : "bg-black/40"
+            scrolled ? "bg-secondary" : "bg-secondary"
           }`}
         >
           {links.map((link, index) => {
+            if (link.service) {
+              return (
+                <div className="group relative mb-4" key={index}>
+                  <div
+                    className="font-kindsans-regular text-white flex gap-2 cursor-pointer"
+                    onClick={() => {
+                      setIsServiceOpen(!isServiceOpen);
+                    }}
+                  >
+                    {link.name}{" "}
+                    <img src={downarrow} alt="services" className="" />
+                  </div>
+                  {isServiceOpen && (
+                    <div className="flex flex-col top-[25px]  font-kindsans-regular border border-[#606060]">
+                      {link.service.map((ser, idx) => (
+                        <Link
+                          to={ser.path}
+                          key={idx}
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                            setIsOpen(false);
+                          }}
+                          className="pl-5 pr-16 py-2 border-t border-[#606060] bg-[#191919] text-white hover:bg-gradient-to-r from-primary to-[#191919]"
+                        >
+                          {ser.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
             const isActive = location.pathname === link.path;
             return (
               <div className="group mb-4 w-fit" key={index}>
