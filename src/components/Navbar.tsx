@@ -75,7 +75,6 @@ const Navbar = () => {
   // Track scroll position to change background and visibility
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
-  const hamburgerRef = useRef<HTMLDivElement>(null);
 
   // Store previous scroll position
   const lastScrollY = useRef(0);
@@ -110,19 +109,7 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        hamburgerRef.current &&
-        !hamburgerRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
+  
   return (
     <div
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -190,7 +177,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 py-5 flex justify-between items-center" ref={hamburgerRef}>
+      <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 py-5 flex justify-between items-center">
         <Link
           to={"/"}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -275,9 +262,7 @@ const Navbar = () => {
                 <div className="group relative mb-4" key={index}>
                   <div
                     className="font-kindsans-regular text-white flex gap-2 cursor-pointer"
-                    onClick={() => {
-                      setIsServiceOpen(!isServiceOpen);
-                    }}
+                    onClick={() => setIsServiceOpen(!isServiceOpen)}
                   >
                     {link.name}{" "}
                     <img src={downarrow} alt="services" className="" />
@@ -288,10 +273,9 @@ const Navbar = () => {
                         <Link
                           to={ser.path}
                           key={idx}
-                          onClick={() => {
-                            window.scrollTo({ top: 0, behavior: "smooth" });
-                            setIsOpen(false);
-                          }}
+                          onClick={() =>
+                          { window.scrollTo({ top: 0, behavior: "smooth" });  setIsOpen(false)}
+                          }
                           className="pl-5 pr-16 py-2 border-t border-[#606060] bg-[#191919] text-white hover:bg-gradient-to-r from-primary to-[#191919]"
                         >
                           {ser.name}
