@@ -274,7 +274,7 @@ const Navbar = () => {
                           to={ser.path}
                           key={idx}
                           onClick={() =>
-                          { window.scrollTo({ top: 0, behavior: "smooth" });  setIsOpen(false)}
+                          { window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);  setIsServiceOpen(false)}
                           }
                           className="pl-5 pr-16 py-2 border-t border-[#606060] bg-[#191919] text-white hover:bg-gradient-to-r from-primary to-[#191919]"
                         >
@@ -294,6 +294,7 @@ const Navbar = () => {
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                     setIsOpen(false);
+                    setIsServiceOpen(false)
                   }}
                   className={`${
                     isActive
