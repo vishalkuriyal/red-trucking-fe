@@ -44,7 +44,7 @@ const Contact = () => {
         },
         {
           label: "Email",
-          value: "info@redtruckinc.com",
+          value: "info@redtrucking.com",
           icon: MailIcon,
           type: "email",
         },
@@ -67,7 +67,7 @@ const Contact = () => {
         },
         {
           label: "Email",
-          value: "sales@redtruckinc.com",
+          value: "sales@redtrucking.com",
           icon: MailIcon,
           type: "email",
         },
@@ -90,7 +90,7 @@ const Contact = () => {
         },
         {
           label: "Email",
-          value: "sales@redtruckinc.com",
+          value: "sales@redtrucking.com",
           icon: MailIcon,
           type: "email",
         },
@@ -113,7 +113,7 @@ const Contact = () => {
         },
         {
           label: "Email",
-          value: "recruiting@redtruckinc.com",
+          value: "recruiting@redtrucking.com",
           icon: MailIcon,
           type: "email",
         },

@@ -52,7 +52,7 @@ const links: LinkType[] = [
     active: false,
   },
   {
-    name: "Red Drivers.",
+    name: "R.E.D. Drivers.",
     path: "/red-drivers",
     active: false,
   },

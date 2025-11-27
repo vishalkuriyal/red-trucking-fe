@@ -81,7 +81,7 @@ const Footer = () => {
             >
               <img src={mail} className="" alt="" />
               <p className="font-kindsans-regular text-lg text-white">
-                 INFO@REDTRUCKING.COM
+                info@redtrucking.com
               </p>
             </a>
             <a

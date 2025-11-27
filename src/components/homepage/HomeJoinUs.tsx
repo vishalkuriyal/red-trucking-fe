@@ -8,7 +8,7 @@ const HomeJoinUs = () => {
       <div className="max-w-screen-2xl mx-auto">
         <div className="flex flex-col items-end">
           <h3 className="text-white anton-regular text-5xl md:text-[96px] text-right md:leading-[92px] mb-6">
-            CARRERS <br />
+            CAREERS <br />
             THAT MOVE YOU FORWARD
           </h3>
           <p className="text-white font-kindsans-regular md:w-[40%] text-right mb-8">
