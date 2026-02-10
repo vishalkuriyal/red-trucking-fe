@@ -14,20 +14,20 @@ const TransloadingWithRed = () => {
               <span className="text-white">TRUCKING & logistics</span>
             </h3>
             <div className="flex flex-col gap-3">
-              <p className="py-2 px-9 font-kindsans-regular text-white bg-[#1d1d1d]">
+              {/* <p className="py-2 px-9 font-kindsans-regular text-white bg-[#1d1d1d]">
                 Experience the speed with our competent drivers.
-              </p>
+              </p> */}
               <p className="py-2 px-9 font-kindsans-regular text-white bg-[#1d1d1d]">
                 Efficient, timely, cheaper, and flexible.
               </p>
               <p className="py-2 px-9 font-kindsans-regular text-white bg-[#1d1d1d]">
-                Value-added services like unloading, sorting, pelletizing.
+                Value-added services like unloading, sorting, palletizing.
               </p>
               <p className="py-2 px-9 font-kindsans-regular text-white bg-[#1d1d1d]">
-                Extensive coverage and proximity to port areas (East coast).
+                Extensive coverage and proximity to port areas.
               </p>
               <p className="py-2 px-9 font-kindsans-regular text-white bg-[#1d1d1d]">
-                Special services for extra-quick shipments.
+                Special services for rush shipments.
               </p>
               <p className="py-2 px-9 font-kindsans-regular text-white bg-[#1d1d1d]">
                 Consolidation of import/export cargo.

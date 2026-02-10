@@ -9,9 +9,7 @@ const TransportationPartner = () => {
           </h3>
           <p className="text-white font-kindsans-regular md:w-[40%] text-right">
             {" "}
-            Our extensive network spread across 48 states makes us ubiquitous
-            and omnipresent. Our professional code is based on safety,
-            sustainability and rich customer experience.{" "}
+            Our extensive network spans 48 states, allowing us to serve customers reliably across the country. Our operations are guided by a strong commitment to safety, sustainability, and delivering a consistently high-quality customer experience.
           </p>
         </div>
       </div>

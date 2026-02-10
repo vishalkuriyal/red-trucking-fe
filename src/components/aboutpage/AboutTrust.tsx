@@ -55,9 +55,9 @@ const AboutTrust = () => {
               TRUST
             </div>
             <div className="md:col-span-5 px-5 py-6 bg-[#1B1B1B] text-white">
-              We earn our clients’ trust through consistent communication,
-              real-time updates and complete transparency in transportation and
-              delivery timelines.
+              We build trust through clear communication, dependable service,
+              and timely updates so our clients always know where their freight
+              stands.
             </div>
           </div>
           <div className="grid md:grid-cols-7 gap-5">
@@ -65,9 +65,9 @@ const AboutTrust = () => {
               SUSTAINABILITY
             </div>
             <div className="md:col-span-5 px-5 py-6 bg-[#1B1B1B] text-white">
-              We earn our clients’ trust through consistent communication,
-              real-time updates and complete transparency in transportation and
-              delivery timelines.
+              We are committed to responsible operations by optimizing routes,
+              reducing inefficiencies, and supporting practices that promote
+              long-term environmental sustainability.
             </div>
           </div>
           <div className="grid md:grid-cols-7 gap-5">
@@ -75,9 +75,9 @@ const AboutTrust = () => {
               SECURITY
             </div>
             <div className="md:col-span-5 px-5 py-6 bg-[#1B1B1B] text-white">
-              We earn our clients’ trust through consistent communication,
-              real-time updates and complete transparency in transportation and
-              delivery timelines.
+              We prioritize the safety and security of every load through strict
+              operational protocols, vetted drivers, and careful handling at
+              every stage of transport.
             </div>
           </div>
           <div className="grid md:grid-cols-7 gap-5">
@@ -85,9 +85,9 @@ const AboutTrust = () => {
               SERVICE AREAS
             </div>
             <div className="md:col-span-5 px-5 py-6 bg-[#1B1B1B] text-white">
-              We earn our clients’ trust through consistent communication,
-              real-time updates and complete transparency in transportation and
-              delivery timelines.
+              With service coverage across 48 states, we provide reliable
+              trucking and logistics solutions tailored to meet regional and
+              nationwide freight needs.
             </div>
           </div>
         </div>
