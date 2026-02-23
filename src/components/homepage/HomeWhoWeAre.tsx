@@ -5,7 +5,7 @@ import PrimaryButton from "../common/PrimaryButton";
 import { motion } from "motion/react";
 
 const HomeWhoWeAre = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className=" w-full bg-bg1 bg-cover overflow-hidden">
       <div className="max-w-screen-2xl mx-auto px-5 sm:px-20 pt-[250px] md:pt-[400px]">
@@ -26,23 +26,31 @@ const HomeWhoWeAre = () => {
                 <span className="text-primary"> 48 STATES</span>
               </h3>
               <p className="font-kindsans-regular text-white mb-6 w-[70%]">
-                R.E.D. Trucking & Logistics offers full-service transportation,
-                warehousing and logistics across 48 U.S. states. Our extensive
-                network helps businesses move goods quickly and safely. With a
-                strong focus on reliability, compliance and timely delivery, we
-                support smooth supply chains and help clients stay ahead in a
-                fast-moving, competitive logistics environment.
+                R.E.D. Trucking & Logistics provides transportation,
+                warehousing, and logistics services across 48 U.S. states. We
+                help businesses move freight efficiently and stay on schedule.
+                Our team focuses on doing the job right - meeting compliance
+                standards, avoiding delays, and keeping your supply chain
+                running smoothly. 
               </p>
-              <PrimaryButton onClick={() => {
-            navigate("/about");
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}>Learn More</PrimaryButton>
+              <PrimaryButton
+                onClick={() => {
+                  navigate("/about");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Learn More
+              </PrimaryButton>
             </div>
           </div>
           <div className=" absolute bottom-8 md:bottom-0 md:-top-10 -right-10">
-            <motion.img initial={{ x: 100, opacity: 0 }}
+            <motion.img
+              initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1 }} src={whiteTruck} className=" h-[200px] md:h-[500px]" />
+              transition={{ duration: 1 }}
+              src={whiteTruck}
+              className=" h-[200px] md:h-[500px]"
+            />
           </div>
         </div>
       </div>

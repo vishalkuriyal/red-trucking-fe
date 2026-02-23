@@ -9,7 +9,9 @@ const TransportationPartner = () => {
           </h3>
           <p className="text-white font-kindsans-regular md:w-[40%] text-right">
             {" "}
-            Our extensive network spans 48 states, allowing us to serve customers reliably across the country. Our operations are guided by a strong commitment to safety, sustainability, and delivering a consistently high-quality customer experience.
+            We understand how quickly delays can impact your supply chain.
+            That’s why our team plans carefully, monitors shipments closely, and
+            keeps communication clear from pickup to delivery.
           </p>
         </div>
       </div>

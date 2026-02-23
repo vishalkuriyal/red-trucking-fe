@@ -57,7 +57,7 @@ const links: LinkType[] = [
     active: false,
   },
   {
-    name: "Blog.",
+    name: "Blogs.",
     path: "/blogs",
     active: false,
   },

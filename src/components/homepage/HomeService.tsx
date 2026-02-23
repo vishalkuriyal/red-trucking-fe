@@ -16,25 +16,25 @@ type ServiceTypeProps = {
 const services: ServiceTypeProps[] = [
   {
     name: "TRANSPORT",
-    des: "Reliable transport solutions including port drayage, rail service and local FTL for fast, secure delivery.",
+    des: "We handle port drayage, rail service, and local FTL with coordinated scheduling and experienced drivers. From container pickup to final delivery, we focus on minimizing wait times and avoiding costly disruptions.",
     path: "/transport",
     image: transport,
   },
   {
     name: "WAREHOUSING",
-    des: "Secure and scalable storage solutions designed to support smooth distribution and supply chain flow.",
+    des: "Our warehousing solutions support short-term and long-term storage, inventory management, and outbound distribution. We help you stay organized, responsive, and prepared for demand changes.",
     path: "/warehousing",
     image: warehouse,
   },
   {
     name: "LOGISTICS",
-    des: "We manage end-to-end coordination, ensuring every shipment moves efficiently from origin to destination without delays.",
+    des: "Our logistics team aligns dispatch, warehousing, and transport to ensure smooth freight movement from origin to destination. We reduce handoff errors and maintain visibility throughout the process.",
     path: "/logistic",
     image: logistics,
   },
   {
     name: "TRANSLOADING",
-    des: "Fast & flexible cargo transfers between modes to reduce transit time and improve freight movement reliability.",
+    des: "We provide fast and reliable cargo transfers between rail, truck, and port to shorten transit times and improve delivery consistency. Our transloading process is designed to protect cargo and maintain schedule integrity.",
     path: "/transloading",
     image: transloading,
   },

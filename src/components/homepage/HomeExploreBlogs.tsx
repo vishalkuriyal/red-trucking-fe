@@ -29,7 +29,7 @@ const HomeExploreBlogs = () => {
             <p className="font-kindsans-regular text-white">
               Stay up to date with the latest in the trucking and logistics
               industry. From safety tips and compliance news to market trends
-              and operational insights, our blog keeps you informed, prepared,
+              and operational insights, our blogs keep you informed, prepared,
               and ahead of the curve.
             </p>
           </div>

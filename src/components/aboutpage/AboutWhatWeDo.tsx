@@ -25,12 +25,7 @@ const AboutWhatWeDo = () => {
             </div>
           </div>
           <p className="font-kindsans-regular md:w-[50%] text-white text-xl">
-            We go beyond transportation by offering tech-enabled logistics with
-            a human touch. Our real-time tracking, automated dispatching, and
-            live updates keep you informed at every step. Whether you're moving
-            frequent freight or seasonal loads, our solutions are tailored to
-            fit your unique demands. Backed by an experienced team, we build
-            partnerships, not just shipments, to support your growth.
+            Smart logistics starts with structure. We operate with defined processes, clear communication channels, and measurable performance standards. By maintaining operational discipline, we reduce unnecessary delays and keep freight movement consistent.
           </p>
         </div>
       </div>

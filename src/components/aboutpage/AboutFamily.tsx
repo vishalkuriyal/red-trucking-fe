@@ -35,21 +35,32 @@ const AboutFamily = () => {
             THE R.E.D. FAMILY
           </h3>
           <p className="text-center text-white font-kindsans-regular md:w-[40%]">
-            R.E.D. Trucking was established in 2004 by the Dinten brothers
-            (Enzo, Edgar and Raymond) with a shared vision to build a legacy in
-            logistics.
+            R.E.D. Trucking was founded in 2004 by Enzo Dinten, with the support
+            of his family and a strong belief in building something meaningful
+            in the logistics industry.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-10">
           {families.map((family, index) => (
-            <div className="flex flex-col gap-5 items-center w-full" key={index}>
+            <div
+              className="flex flex-col gap-5 items-center w-full"
+              key={index}
+            >
               <div className="relative h-[500px]">
-                <img src={family.image} className="w-full object-cover relative z-20 h-full" alt={family.name} />
+                <img
+                  src={family.image}
+                  className="w-full object-cover relative z-20 h-full"
+                  alt={family.name}
+                />
                 <div className="w-full h-[70%] border border-primary bottom-0 absolute"></div>
               </div>
               <div className="w-[50%] bg-primary py-2">
-                <p className="text-center anton-regular text-2xl text-white">{family.name}</p>
-                <p className=" text-center font-kindsans-medium text-white">{family.position}</p>
+                <p className="text-center anton-regular text-2xl text-white">
+                  {family.name}
+                </p>
+                <p className=" text-center font-kindsans-medium text-white">
+                  {family.position}
+                </p>
               </div>
             </div>
           ))}

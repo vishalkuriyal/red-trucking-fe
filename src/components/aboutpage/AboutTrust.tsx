@@ -36,12 +36,7 @@ const AboutTrust = () => {
         </div>
         <div className="md:w-[50%] md:pr-20">
           <p className="font-kindsans-regular text-white">
-            Founded in 2004, R.E.D. Trucking & Logistics has been a trusted
-            partner for end-to-end logistics, transport, and warehousing
-            solutions. Serving both domestic and international clients, we’re
-            known for reliable delivery, seamless coordination, and client-first
-            service. Located less than 4 miles from one of the top U.S. ports,
-            we offer a strong advantage in drayage and nationwide distribution.
+            Founded in 2004, R.E.D. Trucking & Logistics started with a simple goal - to move freight responsibly and build long-term relationships through consistent performance. Over the years, we’ve grown alongside our customers, expanding our reach across 48 states while staying grounded in operational discipline.
           </p>
         </div>
       </div>

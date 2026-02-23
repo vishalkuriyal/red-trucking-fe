@@ -3,7 +3,7 @@ import HomeWhoWeAre from "./HomeWhoWeAre";
 import videoSection from "../../assets/images/videoSection.png";
 import TransportationPartner from "./TransportationPartner";
 import HomeService from "./HomeService";
-import HomeRedValues from "./HomeRedValues";
+// import HomeRedValues from "./HomeRedValues";
 import HomeLeaderShip from "./HomeLeaderShip";
 import HomeJoinUs from "./HomeJoinUs";
 import HomeLocation from "./HomeLocation";
@@ -56,7 +56,7 @@ const HomePage = () => {
       <HomeWhoWeAre />
       <TransportationPartner />
       <HomeService />
-      <HomeRedValues />
+      {/* <HomeRedValues /> */}
       <HomeLeaderShip />
       <HomeJoinUs />
       <HomeLocation />
