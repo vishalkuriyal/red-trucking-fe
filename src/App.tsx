@@ -13,7 +13,9 @@ import CompanyDriver from "./components/companydriver/CompanyDriver";
 import BlogPage from "./components/blogpage/BlogPage";
 import BlogPost from "./components/blogpage/BlogPost";
 import Contact from "./components/contactpage/Contact";
-
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsCondition from "./components/TermsCondition";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -31,10 +33,11 @@ function App() {
           <Route path="/owner-operator" element={<OwnerOperater />} />
           <Route path="/company-driver" element={<CompanyDriver />} />
           <Route path="/blogs" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<BlogPost/>} />
-          <Route path="/contact" element={<Contact/>} />
-     
-          
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsCondition />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

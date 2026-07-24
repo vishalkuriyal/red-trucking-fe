@@ -50,20 +50,20 @@ const serviceLinks: LinkType[] = [
 const helpfulLinks: LinkType[] = [
   {
     name: "Privacy Policy",
-    path: "",
+    path: "/privacy-policy",
   },
   {
     name: "Term & Conditions",
-    path: "",
+    path: "/terms-and-conditions",
   },
   {
     name: "Contact Us",
     path: "/contact",
   },
-  {
-    name: "Join Our Team",
-    path: "/join-us",
-  },
+  // {
+  //   name: "Join Our Team",
+  //   path: "/join-us",
+  // },
 ];
 
 const Footer = () => {
@@ -101,7 +101,7 @@ const Footer = () => {
               <p className="font-kindsans-regular text-lg text-white md:text-left">
                 R.E.D. Trucking & Logistics HQ
                 <br />
-                158 Paris St, Newark, NJ 07105, United States
+                2AB Terminal Way Avenel, NJ 07001
               </p>
             </a>
           </div>
@@ -152,6 +152,9 @@ const Footer = () => {
                 <Link
                   to={link.path}
                   key={index}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                   className="font-kindsans-regular text-white text-xl"
                 >
                   {link.name}
@@ -188,7 +191,8 @@ const Footer = () => {
               className="fill-white hover:fill-[#F20003] cursor-pointer"
             />
           </svg>
-        </a> | 
+        </a>{" "}
+        |
         <a href="http://facebook.com/NJREDTrucking" target="_blank">
           <svg
             width="26"
@@ -202,7 +206,8 @@ const Footer = () => {
               className="fill-white hover:fill-[#F20003] cursor-pointer"
             />
           </svg>
-        </a> | 
+        </a>{" "}
+        |
         <a
           href="https://www.linkedin.com/company/red-trucking/"
           className=""

@@ -38,7 +38,7 @@ const Contact = () => {
       items: [
         {
           label: "Address",
-          value: "158 Paris St, Newark, NJ 07105, United States",
+          value: "2AB Terminal Way Avenel, NJ 07001",
           icon: LocationIcon,
           type: "location",
         },
@@ -61,7 +61,7 @@ const Contact = () => {
       items: [
         {
           label: "Address",
-          value: "158 Paris St, Newark, NJ 07105, United States",
+          value: "2AB Terminal Way Avenel, NJ 07001",
           icon: LocationIcon,
           type: "location",
         },
@@ -84,7 +84,7 @@ const Contact = () => {
       items: [
         {
           label: "Address",
-          value: "158 Paris St, Newark, NJ 07105, United States",
+          value: "2AB Terminal Way Avenel, NJ 07001",
           icon: LocationIcon,
           type: "location",
         },
@@ -107,7 +107,7 @@ const Contact = () => {
       items: [
         {
           label: "Address",
-          value: "158 Paris St, Newark, NJ 07105, United States",
+          value: "2AB Terminal Way Avenel, NJ 07001",
           icon: LocationIcon,
           type: "location",
         },
