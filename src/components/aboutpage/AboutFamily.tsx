@@ -1,6 +1,6 @@
-import enzo from "../../assets/images/aboutEnzo.png";
-import raymond from "../../assets/images/aboutRaymond.png";
-import edgar from "../../assets/images/aboutEdgar.png";
+import enzo from "../../assets/images/aboutEnzo.webp";
+import raymond from "../../assets/images/aboutRaymond.webp";
+import edgar from "../../assets/images/aboutEdgar.webp";
 
 type FamilyType = {
   name: string;

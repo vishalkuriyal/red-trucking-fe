@@ -1,10 +1,10 @@
-import bg from "../../assets/images/aboutSafetyBg.png";
+import bg from "../../assets/images/aboutSafetyBg.webp";
 
 const AboutSafety = () => {
   return (
     <div className="bg-secondary">
       <div className="md:h-[500px] overflow-hidden">
-        <img className="h-full w-full object-cover object-bottom" src={bg} />
+        <img className="h-full w-full object-cover object-bottom" src={bg} alt="" />
       </div>
       <div className="relative max-w-screen-2xl mx-auto px-5 md:px-20">
         <h3 className="anton-regular text-7xl md:text-[128px] md:leading-[114px] gradient-stroke-white absolute -top-10">

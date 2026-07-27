@@ -1,4 +1,4 @@
-import bg from "../../assets/images/aboutHeroBg.png"
+import bg from "../../assets/images/aboutHeroBg.webp"
 
 const AboutHero = () => {
   return (

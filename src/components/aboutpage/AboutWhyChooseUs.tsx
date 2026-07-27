@@ -1,4 +1,4 @@
-import img from "../../assets/images/aboutWhyChooseUsImg.png";
+import img from "../../assets/images/aboutWhyChooseUsImg.webp";
 import maintanence from "../../assets/svgs/maintenance.svg";
 import support from "../../assets/svgs/support.svg";
 import information from "../../assets/svgs/information.svg";
@@ -22,7 +22,7 @@ const AboutWhyChooseUs = () => {
             <div className="flex items-center gap-4">
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={maintanence} className="" />
+                  <img src={maintanence} className="" alt=""/>
                 </div>
               </div>
               <div className="">
@@ -38,7 +38,7 @@ const AboutWhyChooseUs = () => {
             <div className="flex items-center gap-4">
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={supply} className="" />
+                  <img src={supply} className="" alt="" />
                 </div>
               </div>
               <div className="">
@@ -54,7 +54,7 @@ const AboutWhyChooseUs = () => {
             <div className="flex items-center gap-4">
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={transportation} className="" />
+                  <img src={transportation} className="" alt=""/>
                 </div>
               </div>
               <div className="">
@@ -71,7 +71,7 @@ const AboutWhyChooseUs = () => {
 
           {/*  */}
           <div className="w-[49%]">
-            <img src={img} className="w-full" />
+            <img src={img} className="w-full" alt="" />
           </div>
           {/*  */}
           <div className="flex flex-col w-[25%] gap-8">
@@ -87,7 +87,7 @@ const AboutWhyChooseUs = () => {
               </div>
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={training} className="" />
+                  <img src={training} className="" alt=""/>
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@ const AboutWhyChooseUs = () => {
               </div>
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={information} className="" />
+                  <img src={information} className="" alt="" />
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@ const AboutWhyChooseUs = () => {
               </div>
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={support} className="" />
+                  <img src={support} className="" alt=""/>
                 </div>
               </div>
             </div>
@@ -127,13 +127,13 @@ const AboutWhyChooseUs = () => {
         </div>
         <div className="md:hidden">
           <div className="">
-            <img src={img} className="w-full" />
+            <img src={img} className="w-full" alt=""/>
           </div>
           <div className="flex flex-col gap-8 mb-8">
             <div className="flex items-center gap-4">
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={maintanence} className="" />
+                  <img src={maintanence} className="" alt=""/>
                 </div>
               </div>
               <div className="">
@@ -149,7 +149,7 @@ const AboutWhyChooseUs = () => {
             <div className="flex items-center gap-4">
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={supply} className="" />
+                  <img src={supply} className="" alt=""/>
                 </div>
               </div>
               <div className="">
@@ -165,7 +165,7 @@ const AboutWhyChooseUs = () => {
             <div className="flex items-center gap-4">
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={transportation} className="" />
+                  <img src={transportation} className="" alt=""/>
                 </div>
               </div>
               <div className="">
@@ -192,7 +192,7 @@ const AboutWhyChooseUs = () => {
               </div>
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={training} className="" />
+                  <img src={training} className="" alt=""/>
                 </div>
               </div>
             </div>
@@ -208,7 +208,7 @@ const AboutWhyChooseUs = () => {
               </div>
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={information} className="" />
+                  <img src={information} className="" alt=""/>
                 </div>
               </div>
             </div>
@@ -224,7 +224,7 @@ const AboutWhyChooseUs = () => {
               </div>
               <div className="p-2 rounded-full bg-[#262626]">
                 <div className="size-11 rounded-full flex justify-center items-center bg-[#1b1b1b]">
-                  <img src={support} className="" />
+                  <img src={support} className="" alt=""/>
                 </div>
               </div>
             </div>

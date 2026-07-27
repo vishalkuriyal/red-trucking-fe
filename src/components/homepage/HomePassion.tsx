@@ -1,4 +1,4 @@
-import img1 from "../../assets/images/HomeSwiper.png";
+import img1 from "../../assets/images/HomeSwiper.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 // @ts-ignore

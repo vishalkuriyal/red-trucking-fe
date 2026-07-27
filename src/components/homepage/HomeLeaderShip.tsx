@@ -1,8 +1,8 @@
-import enzo from "../../assets/images/enzoDinten.png";
-import edgar from "../../assets/images/edgarDinten.png";
-import raymond from "../../assets/images/raymondDinten.png";
-import linda from "../../assets/images/lindaGilis.png";
-import rob from "../../assets/images/robMovshin.png";
+import enzo from "../../assets/images/enzoDinten.webp";
+import edgar from "../../assets/images/edgarDinten.webp";
+import raymond from "../../assets/images/raymondDinten.webp";
+import linda from "../../assets/images/lindaGilis.webp";
+import rob from "../../assets/images/robMovshin.webp";
 
 type TeamType = {
   name: string;

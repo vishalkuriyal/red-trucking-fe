@@ -1,4 +1,4 @@
-import requirement from "../../assets/images/driverRequirement.png";
+import requirement from "../../assets/images/driverRequirement.webp";
 import icon from "../../assets/svgs/icon.svg";
 
 const CompanyDriverRequirement = () => {
@@ -13,32 +13,32 @@ const CompanyDriverRequirement = () => {
             </h5>
             <div className="flex flex-col ">
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Must Be 23 Years of Age
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Must Have 1 Year of Verifiable Intermodal Experience in the
                   Last 2 Years
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Must Have A Clean MVR/Criminal Background Check
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   TWIC Required
                 </p>
               </div>
               <div className="flex gap-5 py-2">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   HAZMAT Required
                 </p>
@@ -55,25 +55,25 @@ const CompanyDriverRequirement = () => {
             </h5>
             <div className="flex flex-col ">
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Paid Every Week with Direct Deposit as an Option
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Sign-On Bonus
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Referral Bonus
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Additional Performance Bonuses
                 </p>
@@ -86,25 +86,25 @@ const CompanyDriverRequirement = () => {
             </h5>
             <div className="flex flex-col ">
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Health Insurance
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   401K Plan – Employer Contribution of 3%
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   5 Days PTO
                 </p>
               </div>
               <div className="flex gap-5 py-2 border-b border-[#3c3c3c]">
-                <img src={icon} alt="" className="" />
+                <img src={icon} alt="" className=""/>
                 <p className="font-kindsans-semibold text-white text-xl">
                   Holiday Pay
                 </p>

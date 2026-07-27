@@ -1,5 +1,5 @@
-import img from "../../assets/images/aboutTrustImg.png";
-import client from "../../assets/images/aboutTrustClient.png";
+import img from "../../assets/images/aboutTrustImg.webp";
+import client from "../../assets/images/aboutTrustClient.webp";
 
 const AboutTrust = () => {
   return (

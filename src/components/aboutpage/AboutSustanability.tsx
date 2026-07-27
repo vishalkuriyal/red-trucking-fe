@@ -1,10 +1,10 @@
-import bg from "../../assets/images/aboutSustanabilityBg.png"
+import bg from "../../assets/images/aboutSustanabilityBg.webp"
 
 const AboutSustanability = () => {
   return (
     <div className="bg-secondary">
      <div className="md:h-[500px] overflow-hidden">
-        <img className="h-full w-full object-cover object-center" src={bg} />
+        <img className="h-full w-full object-cover object-center" src={bg} alt=""/>
       </div>
       <div className="relative max-w-screen-2xl mx-auto px-5 md:px-20">
         <h3 className="anton-regular text-6xl md:text-[128px] md:leading-[114px] gradient-stroke-white absolute -top-10">

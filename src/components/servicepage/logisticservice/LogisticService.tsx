@@ -1,5 +1,5 @@
 import ServiceHero from "../../common/ServiceHero"
-import bg from "../../../assets/images/logisticServiceHeroBg.png"
+import bg from "../../../assets/images/logisticServiceHeroBg.webp"
 import AboutLogisticsService from "./AboutLogisticsService"
 import LogisticsCards from "./LogisticsCards"
 import HomeContactUs from "../../homepage/HomeContactUs"

@@ -1,5 +1,5 @@
 import ServiceHero from "../../common/ServiceHero";
-import bg from "../../../assets/images/warehouseServiceBg.png";
+import bg from "../../../assets/images/warehouseServiceBg.webp";
 import AboutWarehousing from "./AboutWarehousing";
 import SharedSpace from "./SharedSpace";
 import HomeContactUs from "../../homepage/HomeContactUs";

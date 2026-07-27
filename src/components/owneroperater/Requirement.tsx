@@ -1,5 +1,5 @@
-import requirement from "../../assets/images/requirementImg.png";
-import benefit from "../../assets/images/benefitImg.png";
+import requirement from "../../assets/images/requirementImg.webp";
+import benefit from "../../assets/images/benefitImg.webp";
 import icon from "../../assets/svgs/icon.svg";
 
 const Requirement = () => {

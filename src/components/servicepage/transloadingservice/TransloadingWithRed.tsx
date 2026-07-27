@@ -1,4 +1,4 @@
-import img from "../../../assets/images/transloadingWithRedImg.png";
+import img from "../../../assets/images/transloadingWithRedImg.webp";
 
 const TransloadingWithRed = () => {
   return (

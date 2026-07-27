@@ -1,4 +1,4 @@
-import bg from "../../assets/images/ownerOperatorHeroBg.png";
+import bg from "../../assets/images/ownerOperatorHeroBg.webp";
 
 const CompanyDriverHero = () => {
   return (

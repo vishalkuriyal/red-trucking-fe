@@ -1,6 +1,6 @@
 import HomePageHero from "./HomePageHero";
 import HomeWhoWeAre from "./HomeWhoWeAre";
-import videoSection from "../../assets/images/videoSection.png";
+import videoSection from "../../assets/images/videoSection.webp";
 import TransportationPartner from "./TransportationPartner";
 import HomeService from "./HomeService";
 // import HomeRedValues from "./HomeRedValues";

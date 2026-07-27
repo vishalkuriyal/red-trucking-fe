@@ -1,6 +1,6 @@
-import regional from "../../assets/images/regionalImg.png";
-import always from "../../assets/images/alwaysOnRoadImg.png";
-import deicated from "../../assets/images/dedicatedImg.png";
+import regional from "../../assets/images/regionalImg.webp";
+import always from "../../assets/images/alwaysOnRoadImg.webp";
+import deicated from "../../assets/images/dedicatedImg.webp";
 
 type CardType = {
   name: string;

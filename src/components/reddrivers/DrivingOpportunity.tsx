@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import videoSection from "../../assets/images/videoRedDriver.png"
+import videoSection from "../../assets/images/videoRedDriver.webp"
 import video from "../../assets/video/RED-drivers.mp4"
 import { useRef, useState } from "react";
 

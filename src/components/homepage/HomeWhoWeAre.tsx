@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import circle from "../../assets/images/homeWhoWeAreText.png";
-import whiteTruck from "../../assets/images/whiteTruck.png";
+import circle from "../../assets/images/homeWhoWeAreText.webp";
+import whiteTruck from "../../assets/images/whiteTruck.webp";
 import PrimaryButton from "../common/PrimaryButton";
 import { motion } from "motion/react";
 

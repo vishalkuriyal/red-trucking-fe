@@ -1,4 +1,4 @@
-import img from "../../assets/images/aboutMissionImg.png";
+import img from "../../assets/images/aboutMissionImg.webp";
 
 const AboutMission = () => {
   return (

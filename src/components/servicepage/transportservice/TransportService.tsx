@@ -1,5 +1,5 @@
 import ServiceHero from "../../common/ServiceHero";
-import bg from "../../../assets/images/serviceTransportBg.png";
+import bg from "../../../assets/images/serviceTransportBg.webp";
 import AboutTransportedService from "./AboutTransportedService";
 import DedicatedFleets from "./DedicatedFleets";
 import HomeContactUs from "../../homepage/HomeContactUs";

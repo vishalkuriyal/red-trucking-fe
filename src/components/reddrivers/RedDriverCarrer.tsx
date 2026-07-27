@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import img from "../../assets/images/redDriverCarreImg.png";
+import img from "../../assets/images/redDriverCarreImg.webp";
 import icon from "../../assets/svgs/icon.svg";
 
 const RedDriverCarrer = () => {

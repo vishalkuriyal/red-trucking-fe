@@ -1,4 +1,4 @@
-import bg from "../../assets/images/blogPageHeroBg.png";
+import bg from "../../assets/images/blogPageHeroBg.webp";
 const BlogPageHero = () => {
   return (
     <div className="bg-secondary pt-[80px] md:pt-[130px]">

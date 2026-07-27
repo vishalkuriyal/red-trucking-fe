@@ -1,5 +1,5 @@
 import ServiceHero from "../../common/ServiceHero"
-import bg from "../../../assets/images/transloadingServiceHeroBg.png"
+import bg from "../../../assets/images/transloadingServiceHeroBg.webp"
 import AboutTransloadingService from "./AboutTransloadingService"
 import TransloadingWithRed from "./TransloadingWithRed"
 import HomeContactUs from "../../homepage/HomeContactUs"

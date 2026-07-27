@@ -27,11 +27,11 @@ export default {
         'dot-path': 'dot-path 6s linear infinite',
       },
       backgroundImage: {
-        bg1: "url('../src/assets/images/homeWhoWeAreBg.png')",
-        bg2: "url('../src/assets/images/transportationPartnerBg.png')",
-        bg3: "url('../src/assets/images/transportServiceimg.png')",
-        bg4: "url('../src/assets/images/aboutWarehouseServiceBg.png')",
-        bg5: "url('../src/assets/images/aboutTransloadingBg.png')",
+        bg1: "url('../src/assets/images/homeWhoWeAreBg.webp')",
+        bg2: "url('../src/assets/images/transportationPartnerBg.webp')",
+        bg3: "url('../src/assets/images/transportServiceimg.webp')",
+        bg4: "url('../src/assets/images/aboutWarehouseServiceBg.webp')",
+        bg5: "url('../src/assets/images/aboutTransloadingBg.webp')",
       },
     },
     

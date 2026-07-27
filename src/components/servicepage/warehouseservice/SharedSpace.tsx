@@ -1,4 +1,4 @@
-import img from "../../../assets/images/sharedSpaceImg.png";
+import img from "../../../assets/images/sharedSpaceImg.webp";
 
 const SharedSpace = () => {
   return (

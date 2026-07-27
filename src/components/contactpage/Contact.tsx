@@ -1,10 +1,10 @@
-import bg from "../../assets/images/contactHeroBg.png";
+import bg from "../../assets/images/contactHeroBg.webp";
 import LocationIcon from "../../assets/svgs/locationicon.svg";
 import MailIcon from "../../assets/svgs/mailicon.svg";
 import PhoneIcon from "../../assets/svgs/phoneicon.svg";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import image from "../../assets/images/contactimg.png";
+import image from "../../assets/images/contactimg.webp";
 import drop from "../../assets/svgs/donwarrow.svg";
 import clock from "../../assets/svgs/Clock.svg";
 import HomeLocation from "../homepage/HomeLocation";

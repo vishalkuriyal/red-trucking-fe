@@ -1,13 +1,19 @@
 import { useNavigate } from "react-router-dom";
-import bg from "../../assets/images/homeHero.png";
-import truck from "../../assets/images/redTruck.png";
+import bg from "../../assets/images/homeHero.webp";
+import truck from "../../assets/images/redTruck.webp";
 import { motion } from "motion/react";
 
 const HomePageHero = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="h-[600px] md:h-[900px] relative overflow-hidden">
-      <img src={bg} className="w-full object-cover h-full" alt="" />
+      <img
+        fetchPriority="high"
+        loading="eager"
+        src={bg}
+        className="w-full object-cover h-full"
+        alt=""
+      />
       <div className="absolute h-full flex justify-center sm:items-center top-0 w-full">
         <div className="mt-36 md:mt-20 relative w-full flex justify-center">
           <div className="">

@@ -2,8 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 // @ts-ignore
 import "swiper/css";
-import img1 from "../../assets/images/aboutDrivingImg1.png";
-import img2 from "../../assets/images/aboutDrivingImg2.png";
+import img1 from "../../assets/images/aboutDrivingImg1.webp";
+import img2 from "../../assets/images/aboutDrivingImg2.webp";
 import PrimaryButton from "../common/PrimaryButton";
 import { useNavigate } from "react-router-dom";
 
@@ -45,15 +45,39 @@ const AboutDrivingJourney = () => {
               loop
               className="h-full w-full"
             >
-              <SwiperSlide className="h-[3000px]">
-                <img src={img1} className="object-cover object-center h-full" />
+              <SwiperSlide className="h-[400px] md:h-[500px]">
+                <img
+                  src={img1}
+                  width={600}
+                  height={500}
+                  className="object-cover object-center h-full w-full"
+                  alt="Driving journey"
+                />
               </SwiperSlide>
-              <SwiperSlide className="h-[3000px]">
+              <SwiperSlide className="h-[400px] md:h-[500px]">
+                <img
+                  src={img2}
+                  width={600}
+                  height={500}
+                  className="object-cover object-center h-full w-full"
+                  alt="Driving journey"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="h-[400px] md:h-[500px]">
+                <img
+                  src={img1}
+                  width={600}
+                  height={500}
+                  className="object-cover object-center h-full w-full"
+                  alt="Driving journey"
+                />
+              </SwiperSlide>
+              {/* <SwiperSlide className="h-[3000px]">
                 <img src={img2} className="object-cover object-center h-full" />
               </SwiperSlide>
               <SwiperSlide className="h-[3000px]">
                 <img src={img1} className="object-cover object-center h-full" />
-              </SwiperSlide>
+              </SwiperSlide>*/}
             </Swiper>
           </div>
         </div>

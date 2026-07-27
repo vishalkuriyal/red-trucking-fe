@@ -1,4 +1,4 @@
-import bg from "../../assets/images/aboutWhatWeDoImg.png"
+import bg from "../../assets/images/aboutWhatWeDoImg.webp"
 
 const AboutWhatWeDo = () => {
   return (

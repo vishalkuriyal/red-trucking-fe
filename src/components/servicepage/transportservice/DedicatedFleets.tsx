@@ -1,4 +1,4 @@
-import img from "../../../assets/images/dedicatedFleet.png";
+import img from "../../../assets/images/dedicatedFleet.webp";
 
 const DedicatedFleets = () => {
   return (
