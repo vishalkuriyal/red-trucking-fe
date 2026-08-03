@@ -37,6 +37,9 @@ const AboutTransportedService = () => {
             </h3>
             <div className="border-l-2 border-primary ">
               <div className="py-2 pl-9 flex border-y border-r text-white font-kindsans-regular">
+                Drayage or Bulk
+              </div>
+              <div className="py-2 pl-9 flex border-y border-r text-white font-kindsans-regular">
                 Reefer (Refrigerated)
               </div>
               <div className="py-2 pl-9 flex border-y border-r text-white font-kindsans-regular">
@@ -47,9 +50,6 @@ const AboutTransportedService = () => {
               </div>
               <div className="py-2 pl-9 flex border-y border-r text-white font-kindsans-regular">
                 Team Service
-              </div>
-              <div className="py-2 pl-9 flex border-y border-r text-white font-kindsans-regular">
-                Drayage or Bulk
               </div>
               <div className="py-2 pl-9 flex border-y border-r text-white font-kindsans-regular">
                 FCL (Full Container Load)

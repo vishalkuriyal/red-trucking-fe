@@ -6,45 +6,51 @@ const AboutWarehousing = () => {
           <div className="md:w-[40%]">
             <h4 className="anton-regular text-white text-4xl">
               WAREHOUSE STORAGE,
-              <br/><span className="text-primary"> MANAGEMENT & DISTRIBUTION</span>
+              <br />
+              <span className="text-primary"> MANAGEMENT & DISTRIBUTION</span>
             </h4>
           </div>
           <div className="md:w-[50%]">
             <p className="font-kindsans-medium text-white mb-6 text-xl">
-              We offer reliable warehousing solutions designed to handle your
-              cargo with care and efficiency. 
+              Whether you’re looking for short/long-term storage, or need your
+              cargo expertly palletized and warehoused, we have just the service
+              for you.
             </p>
             <p className="font-kindsans-regular text-white">
-              Whether you need short-term storage, long-term management, or
-              expert palletizing and distribution, we’ve got you covered. Our
-              two spacious warehouses, totaling 63,500 sq. ft., are located less
-              than four miles from one of the largest ports in the U.S., giving
-              you unmatched access and turnaround time. With the space, staff
-              and systems to store nearly any type of cargo, we make sure your
-              goods stay secure, organized, and ready when you are.
+              RED has{" "}
+              <span className="text-primary">
+                two warehouses totalling a gigantic 63,500 sq ft!
+              </span>{" "}
+              These warehouses are located less than 4 miles from the
+              3rd-largest water port in the country. With the proximity and
+              storage capacity that RED has to offer, you can rest assured that
+              we can comfortably store any size of cargo in record speed.
+              Whether you’re with us for the short-term or the long haul, RED
+              can provide you with storage solutions that are specifically
+              tailored to your needs. Learn more about the perks of working with
+              RED below.
             </p>
           </div>
         </div>
         <div className="flex flex-col md:flex-row gap-8 md:gap-0 justify-between mb-10">
           <div className="md:w-[40%]">
             <h4 className="anton-regular text-white text-4xl">
-              CONTRACT WAREHOUSING & 
-              <br/><span className="text-primary"> DISTRIBUTION</span>
+              CONTRACT WAREHOUSING &
+              <br />
+              <span className="text-primary"> DISTRIBUTION</span>
             </h4>
           </div>
           <div className="md:w-[50%]">
-            <p className="font-kindsans-medium text-white mb-6 text-xl">
-              We offer reliable warehousing solutions designed to handle your
-              cargo with care and efficiency. 
+            <p className="font-kindsans-regular text-white mb-6">
+              Through years of dedicated service to our RED customer base, we’ve
+              developed specialty services that provide clients with
+              professionally maintained facilities that feature high ceilings,
+              modern handling equipment, accredited sanitation programs, and
+              advanced security/fire protection systems.
             </p>
-            <p className="font-kindsans-regular text-white">
-              Whether you need short-term storage, long-term management, or
-              expert palletizing and distribution, we’ve got you covered. Our
-              two spacious warehouses, totaling 63,500 sq. ft., are located less
-              than four miles from one of the largest ports in the U.S., giving
-              you unmatched access and turnaround time. With the space, staff
-              and systems to store nearly any type of cargo, we make sure your
-              goods stay secure, organized, and ready when you are.
+            <p className="font-kindsans-medium text-white  text-xl">
+              Get ready for a five-star inventory management experience with our
+              contract warehouse storage and distribution services.
             </p>
           </div>
         </div>

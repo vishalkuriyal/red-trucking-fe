@@ -3,7 +3,6 @@ import hamburger from "../assets/svgs/hamburger.svg";
 import downarrow from "../assets/svgs/donwarrow.svg";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
-import PrimaryButton from "./common/PrimaryButton";
 
 type LinkType = {
   name: string;
@@ -237,12 +236,12 @@ const Navbar = () => {
             );
           })}
         </nav>
-        <PrimaryButton
+        {/* <PrimaryButton
           className="hidden md:flex"
           onClick={() => window.open("https://red.activetrac.net/")}
         >
           Client Login
-        </PrimaryButton>
+        </PrimaryButton> */}
         <div
           className="sm:hidden cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}

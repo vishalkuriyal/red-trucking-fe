@@ -36,9 +36,9 @@ const cards: CardTypes[] = [
     icon: rates,
   },
   {
-    name: "Onsite",
-    spanHeading: "mechanics",
-    des: "Get immediate mechanical help when needed, with no out-of-pocket costs for repairs.",
+    name: "TOP-TIER",
+    spanHeading: "EQUIPMENT",
+    des: "Our custom-built, height and size adjutable chassis are engineered to speed up loading, reduce turnaround times, and deliver greater efficiency on every haul.",
     number: "04",
     icon: mechanics,
   },

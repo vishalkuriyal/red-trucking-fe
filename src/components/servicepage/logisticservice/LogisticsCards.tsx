@@ -20,9 +20,7 @@ const LogisticsCards = () => {
               <span className="text-primary">CHASSIS</span>
             </h4>
             <p className="text-white font-kindsans-regular">
-              We provide our own well-maintained chassis to drivers, helping you
-              avoid rental hassles. It saves both time and money while ensuring
-              smoother, faster operations from pickup to final delivery.
+              Our premium fleet of company-owned chassis represents a major investment in operational excellence. Custom adjustable to different heights and container sizes, they are built to safely transport both heavy and lightweight freight. This allows us to reduce equipment shortages, speed up loading and delivery, and provide a more reliable logistics experience for our customers.
             </p>
           </div>
           <div className="px-8 py-12 border border-[#3C3C3C]">

@@ -34,7 +34,7 @@ const RedDriverCarrer = () => {
                 <div className="flex gap-5 items-center">
                   <img src={icon} className="" alt="" />
                   <h5 className="font-kindsans-semibold text-white text-xl">
-                    5 Days PTO
+                    Hourly Pay + Performance Bonuses
                   </h5>
                 </div>
               </div>
@@ -42,23 +42,9 @@ const RedDriverCarrer = () => {
                 <div className="flex gap-5 items-center">
                   <img src={icon} className="" alt="" />
                   <h5 className="font-kindsans-semibold text-white text-xl">
-                    5 Days Sick Leave
+                    Private CHassis Fleet
                   </h5>
-                </div>
-                <div className="flex gap-5  items-center">
-                  <img src={icon} className="" alt="" />
-                  <h5 className="font-kindsans-semibold text-white text-xl">
-                    401k
-                  </h5>
-                </div>
-              </div>
-              <div className="flex justify-between pt-2">
-                <div className="flex gap-5 items-center">
-                  <img src={icon} className="" alt="" />
-                  <h5 className="font-kindsans-semibold text-white text-xl">
-                    Weekly Pay Option with Direct Deposit
-                  </h5>
-                </div>
+                </div>  
               </div>
             </div>
             <button

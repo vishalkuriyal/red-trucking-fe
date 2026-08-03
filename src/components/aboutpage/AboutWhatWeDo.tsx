@@ -30,7 +30,7 @@ const AboutWhatWeDo = () => {
         </div>
       </div>
       <div className="pb-8 md:pb-28">
-        <img className="w-full md:h-[500px] object-cover" src={ bg} alt=""/>
+        <img className="w-full md:h-[500px] object-cover object-bottom" src={ bg} alt=""/>
       </div>
     </div>
   );
