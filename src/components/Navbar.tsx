@@ -24,7 +24,7 @@ const links: LinkType[] = [
   },
   {
     name: "About.",
-    path: "/about",
+    path: "/about-us",
     active: false,
   },
   {
@@ -37,7 +37,7 @@ const links: LinkType[] = [
       },
       {
         name: "Warehousing",
-        path: "/warehousing",
+        path: "/warehouse",
       },
       {
         name: "Logistic",
@@ -62,7 +62,7 @@ const links: LinkType[] = [
   },
   {
     name: "Contact.",
-    path: "/contact",
+    path: "/contact-us",
     active: false,
   },
 ];

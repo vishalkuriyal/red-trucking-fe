@@ -24,9 +24,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about-us" element={<AboutPage />} />
           <Route path="/transport" element={<TransportService />} />
-          <Route path="/warehousing" element={<WarehouseService />} />
+          <Route path="/warehouse" element={<WarehouseService />} />
           <Route path="/logistic" element={<LogisticService />} />
           <Route path="/transloading" element={<TransloadingService />} />
           <Route path="/red-drivers" element={<RedDrivers />} />
@@ -34,7 +34,7 @@ function App() {
           <Route path="/company-driver" element={<CompanyDriver />} />
           <Route path="/blogs" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact-us" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsCondition />} />
           <Route path="*" element={<NotFound />} />

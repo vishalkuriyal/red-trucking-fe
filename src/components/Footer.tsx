@@ -16,7 +16,7 @@ const pageLinks: LinkType[] = [
   },
   {
     name: "About Us",
-    path: "/about",
+    path: "/about-us",
   },
   {
     name: "R.E.D. Drivers",
@@ -35,7 +35,7 @@ const serviceLinks: LinkType[] = [
   },
   {
     name: "Warehousing",
-    path: "/warehousing",
+    path: "/warehouse",
   },
   {
     name: "Logistic",
@@ -58,7 +58,7 @@ const helpfulLinks: LinkType[] = [
   },
   {
     name: "Contact Us",
-    path: "/contact",
+    path: "/contact-us",
   },
   // {
   //   name: "Join Our Team",

@@ -12,7 +12,7 @@ const HomeContactUs = () => {
         <div className="flex justify-center">
           <PrimaryButton
             onClick={() => {
-              navigate("/contact");
+              navigate("/contact-us");
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
