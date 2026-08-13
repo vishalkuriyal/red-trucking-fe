@@ -7,7 +7,7 @@
   src: url("/fonts/KindSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   src: url("/fonts/KindSans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
 }
 
 @font-face {
@@ -23,7 +23,7 @@
   src: url("/fonts/KindSans-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
 }
 
 @font-face {
@@ -31,7 +31,11 @@
   src: url("/fonts/KindSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
+}
+
+body {
+  font-family: "kind-sans-regular", "Segoe UI", sans-serif;
 }
 
 .anton-regular {

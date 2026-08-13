@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import bg from "../../assets/images/contactHeroBg.webp";
 import LocationIcon from "../../assets/svgs/locationicon.svg";
 import MailIcon from "../../assets/svgs/mailicon.svg";
@@ -21,17 +22,25 @@ interface CardData {
   items: ContactItem[];
 }
 
-// type ContactFormType = {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   phoneNumber: string;
-//   message: string;
-//   service: "logistic" | "sales" | "support";
-//   bestTime: string;
-// };
+interface ContactFormValues {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  service: string;
+  bestTime: string;
+  message: string;
+}
+
+// TODO: paste your Apps Script Web App URL here (ends in /exec)
+const SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbzsKze8WFDKoxfQ3DNQ0rCPteoFxNrQkKSYtuRVKs-jLVgSndhk43feTaNyca7eTTM7/exec";
 
 const Contact = () => {
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
   const data: CardData[] = [
     {
       title: "HEADQUARTER",
@@ -139,6 +148,66 @@ const Contact = () => {
     message: Yup.string().required("Message is required"),
   });
 
+  const initialValues: ContactFormValues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    service: "",
+    bestTime: "",
+    message: "",
+  };
+
+  useEffect(() => {
+    if (submitStatus !== "idle") {
+      const timer = setTimeout(() => setSubmitStatus("idle"), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
+
+  useEffect(() => {
+    // Set Page Title
+    document.title = "Contact R.E.D. Trucking & Logistics | Get in Touch";
+
+    // --- Description ---
+    let metaDescription = document.querySelector<HTMLMetaElement>(
+      "meta[name='description']",
+    );
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute(
+      "content",
+      "Contact R.E.D. for transportation, warehousing, transloading, drayage, and logistics services. Speak with our team about your freight needs.",
+    );
+
+    // --- Keywords ---
+    // let metaKeywords = document.querySelector<HTMLMetaElement>(
+    //   "meta[name='keywords']",
+    // );
+    // if (!metaKeywords) {
+    //   metaKeywords = document.createElement("meta");
+    //   metaKeywords.name = "keywords";
+    //   document.head.appendChild(metaKeywords);
+    // }
+    // metaKeywords.setAttribute(
+    //   "content",
+    //   "Digital Marketing & IT Services Company",
+    // );
+    // --- Canonical ---
+    // let linkTag = document.querySelector<HTMLLinkElement>(
+    //   "link[rel='canonical']",
+    // );
+    // if (!linkTag) {
+    //   linkTag = document.createElement("link");
+    //   linkTag.rel = "canonical";
+    //   document.head.appendChild(linkTag);
+    // }
+    // linkTag.setAttribute("href", "https://www.techqilla.com");
+  }, []);
+
   return (
     <>
       {/* Existing Header Section */}
@@ -169,8 +238,6 @@ const Contact = () => {
           </h2>
         </div>
       </div>
-
-      {/* Your existing return content ends here, now insert the cards */}
 
       {/* Cards Section */}
       <div className="flex flex-wrap bg-secondary justify-center mt-0 shadow-none py-8 md:py-14">
@@ -209,180 +276,201 @@ const Contact = () => {
           </h3>
           <div className="flex flex-col md:flex-row gap-8 md:gap-20 h-full">
             <div className="w-full md:w-1/2 h-full">
-              <Formik
-                initialValues={{
-                  firstName: "",
-                  lastName: "",
-                  email: "",
-                  phoneNumber: "",
-                  service: "",
-                  bestTime: "",
-                  message: "",
-                }}
-                validationSchema={validationSchema}
-                onSubmit={(values, actions) => {
-                  console.log("Form values:", values);
+              {submitStatus === "success" && (
+                <div className="bg-green-600/20 border border-green-500 text-green-400 p-4 mb-6">
+                  Thanks! Your message has been sent — we'll get back to you
+                  soon.
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div className="bg-red-600/20 border border-red-500 text-red-400 p-4 mb-6">
+                  Something went wrong sending your message. Please try again or
+                  call us directly.
+                </div>
+              )}
 
-                  // Here you would send the form data to your backend
-                  // handleSubmitToBackend(values);
-                  actions.resetForm({
-                    values: {
-                      firstName: "",
-                      lastName: "",
-                      phoneNumber: "",
-                      email: "",
-                      service: "logistic",
-                      bestTime: "",
-                      message: "",
-                    },
-                  });
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={async (values, actions) => {
+                  try {
+                    await fetch(SHEET_URL, {
+                      method: "POST",
+                      mode: "no-cors",
+                      body: new URLSearchParams({
+                        formType: "contact",
+                        ...values,
+                      }),
+                    });
+                    setSubmitStatus("success");
+                  } catch (err) {
+                    console.error("Sheet submission failed:", err);
+                    setSubmitStatus("error");
+                  } finally {
+                    actions.setSubmitting(false);
+                    actions.resetForm({ values: initialValues });
+                  }
                 }}
               >
-                <div className="flex flex-col md:flex-row gap-8 items-start ">
-                  <Form className="grid grid-cols-1 md:grid-cols-2 gap-6  text-white justify-between">
-                    <div>
-                      <label className="" htmlFor="firstName">
-                        First Name
-                      </label>
-                      <Field
-                        name="firstName"
-                        placeholder="First Name"
-                        className="w-full p-5 mt-2 outline-none  text-white bg-transparent border border-[#D9D9D9]/30"
-                      />
-                      <ErrorMessage
-                        name="firstName"
-                        component="div"
-                        className="text-red-500"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName">Last Name</label>
-                      <Field
-                        name="lastName"
-                        placeholder="Last Name"
-                        className="w-full p-5 mt-2 outline-none text-white bg-transparent border border-[#D9D9D9]/30"
-                      />
-                      <ErrorMessage
-                        name="lastName"
-                        component="div"
-                        className="text-red-500"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email">Email</label>
-                      <Field
-                        name="email"
-                        placeholder="Email"
-                        type="email"
-                        className="w-full p-5 mt-2 outline-none text-white   bg-transparent border border-[#D9D9D9]/30"
-                      />
-                      <ErrorMessage
-                        name="email"
-                        component="div"
-                        className="text-red-500"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="phoneNumber">Phone Number</label>
-                      <Field
-                        name="phoneNumber"
-                        placeholder="Phone Number"
-                        className="w-full p-5 mt-2 outline-none text-white  bg-transparent border border-[#D9D9D9]/30"
-                      />
-                      <ErrorMessage
-                        name="phoneNumber"
-                        component="div"
-                        className="text-red-500"
-                      />
-                    </div>
-                    <div className="Custom-Select relative w-full">
-                      <label htmlFor="service">Service</label>
-                      <Field
-                        name="service"
-                        as="select"
-                        className="w-full p-5 mt-2 outline-none text-white appearance-none bg-secondary border border-[#D9D9D9]/30 pr-10"
-                      >
-                        <option value="" className="">
-                          Select a service
-                        </option>
-                        <option value="logistics" className="">
-                          Logistics
-                        </option>
-                        <option value="sales">Sales</option>
-                        <option value="support">Support</option>
-                      </Field>
-
-                      {/* Custom dropdown icon (image or SVG) */}
-                      <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2">
-                        <img src={drop} alt="dropdown icon" className="mt-6 " />
+                {({ isSubmitting }) => (
+                  <div className="flex flex-col md:flex-row gap-8 items-start ">
+                    <Form className="grid grid-cols-1 md:grid-cols-2 gap-6  text-white justify-between">
+                      <div>
+                        <label className="" htmlFor="firstName">
+                          First Name
+                        </label>
+                        <Field
+                          name="firstName"
+                          placeholder="First Name"
+                          className="w-full p-5 mt-2 outline-none  text-white bg-transparent border border-[#D9D9D9]/30"
+                        />
+                        <ErrorMessage
+                          name="firstName"
+                          component="div"
+                          className="text-red-500"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="lastName">Last Name</label>
+                        <Field
+                          name="lastName"
+                          placeholder="Last Name"
+                          className="w-full p-5 mt-2 outline-none text-white bg-transparent border border-[#D9D9D9]/30"
+                        />
+                        <ErrorMessage
+                          name="lastName"
+                          component="div"
+                          className="text-red-500"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email">Email</label>
+                        <Field
+                          name="email"
+                          placeholder="Email"
+                          type="email"
+                          className="w-full p-5 mt-2 outline-none text-white   bg-transparent border border-[#D9D9D9]/30"
+                        />
+                        <ErrorMessage
+                          name="email"
+                          component="div"
+                          className="text-red-500"
+                        />
                       </div>
 
-                      <ErrorMessage
-                        name="service"
-                        component="div"
-                        className="text-red-500"
-                      />
-                    </div>
-
-                    <div className="Custom-Clock relative w-full">
-                      <label htmlFor="bestTime">Best Time to Connect</label>
-                      <Field
-                        name="bestTime"
-                        placeholder="HH-MM-AM"
-                        className="w-full p-5 mt-2 outline-none text-white  bg-transparent border border-[#D9D9D9]/30"
-                      />
-                      {/* Custom dropdown icon (image or SVG) */}
-                      <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2">
-                        <img src={clock} alt="dropdown icon" className="mt-6" />
+                      <div>
+                        <label htmlFor="phoneNumber">Phone Number</label>
+                        <Field
+                          name="phoneNumber"
+                          placeholder="Phone Number"
+                          className="w-full p-5 mt-2 outline-none text-white  bg-transparent border border-[#D9D9D9]/30"
+                        />
+                        <ErrorMessage
+                          name="phoneNumber"
+                          component="div"
+                          className="text-red-500"
+                        />
                       </div>
-                      <ErrorMessage
-                        name="bestTime"
-                        component="div"
-                        className="text-red-500"
-                      />
-                    </div>
+                      <div className="Custom-Select relative w-full">
+                        <label htmlFor="service">Service</label>
+                        <Field
+                          name="service"
+                          as="select"
+                          className="w-full p-5 mt-2 outline-none text-white appearance-none bg-secondary border border-[#D9D9D9]/30 pr-10"
+                        >
+                          <option value="" className="">
+                            Select a service
+                          </option>
+                          <option value="logistics" className="">
+                            Logistics
+                          </option>
+                          <option value="sales">Sales</option>
+                          <option value="support">Support</option>
+                        </Field>
 
-                    <div className="md:col-span-2">
-                      <label htmlFor="message">Message</label>
-                      <Field
-                        name="message"
-                        placeholder="Type Message"
-                        as="textarea"
-                        rows={4}
-                        className="w-full p-2 mt-2 h-30 outline-none text-white bg-transparent border border-[#D9D9D9]/30"
-                      />
-                      <ErrorMessage
-                        name="message"
-                        component="div"
-                        className="text-red-500"
-                      />
-                    </div>
-                    <div className="md:col-span-2">
-                      <button className="font-kindsans-bold flex group  md:mt-8">
-                        <p className="py-4 px-5 bg-primary text-white">
-                          Submit
-                        </p>
-                        <div className="bg-[#D00003] p-[10px]">
-                          <div className="size-10 flex justify-center items-center border border-white rounded-full group-hover:bg-white transition-all duration-500">
-                            <svg
-                              width="14"
-                              height="6"
-                              viewBox="0 0 14 5"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M11.205 4.60289L12.983 2.82488C13.042 2.76594 13.0751 2.68599 13.0751 2.60263C13.0751 2.51927 13.042 2.43932 12.983 2.38038L11.205 0.602371C11.1611 0.558277 11.105 0.528222 11.044 0.516016C10.9829 0.50381 10.9197 0.510002 10.8621 0.533807C10.8046 0.557613 10.7555 0.59796 10.7209 0.649734C10.6864 0.701507 10.668 0.762375 10.668 0.824622L10.6685 2.28837L0.314696 2.28792V2.91734L10.6685 2.91689L10.668 4.38064C10.668 4.44289 10.6864 4.50375 10.7209 4.55553C10.7555 4.6073 10.8046 4.64765 10.8621 4.67145C10.9197 4.69526 10.9829 4.70145 11.044 4.68925C11.105 4.67704 11.1611 4.64698 11.205 4.60289Z"
-                                className="fill-[#F5F5F5] group-hover:fill-[#F20003] transition-all duration-500"
-                              />
-                            </svg>
-                          </div>
+                        {/* Custom dropdown icon (image or SVG) */}
+                        <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2">
+                          <img
+                            src={drop}
+                            alt="dropdown icon"
+                            className="mt-6 "
+                          />
                         </div>
-                      </button>
-                    </div>
-                  </Form>
-                </div>
+
+                        <ErrorMessage
+                          name="service"
+                          component="div"
+                          className="text-red-500"
+                        />
+                      </div>
+
+                      <div className="Custom-Clock relative w-full">
+                        <label htmlFor="bestTime">Best Time to Connect</label>
+                        <Field
+                          name="bestTime"
+                          placeholder="Write in (12-00-AM)"
+                          className="w-full p-5 mt-2 outline-none text-white  bg-transparent border border-[#D9D9D9]/30"
+                        />
+                        {/* Custom dropdown icon (image or SVG) */}
+                        <div className="pointer-events-none absolute right-2 top-1/2 transform -translate-y-1/2">
+                          <img
+                            src={clock}
+                            alt="dropdown icon"
+                            className="mt-6"
+                          />
+                        </div>
+                        <ErrorMessage
+                          name="bestTime"
+                          component="div"
+                          className="text-red-500"
+                        />
+                      </div>
+
+                      <div className="md:col-span-2">
+                        <label htmlFor="message">Message</label>
+                        <Field
+                          name="message"
+                          placeholder="Type Message"
+                          as="textarea"
+                          rows={4}
+                          className="w-full p-2 mt-2 h-30 outline-none text-white bg-transparent border border-[#D9D9D9]/30"
+                        />
+                        <ErrorMessage
+                          name="message"
+                          component="div"
+                          className="text-red-500"
+                        />
+                      </div>
+                      <div className="md:col-span-2">
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="font-kindsans-bold flex group  md:mt-8 disabled:opacity-60"
+                        >
+                          <p className="py-4 px-5 bg-primary text-white">
+                            {isSubmitting ? "Sending..." : "Submit"}
+                          </p>
+                          <div className="bg-[#D00003] p-[10px]">
+                            <div className="size-10 flex justify-center items-center border border-white rounded-full group-hover:bg-white transition-all duration-500">
+                              <svg
+                                width="14"
+                                height="6"
+                                viewBox="0 0 14 5"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M11.205 4.60289L12.983 2.82488C13.042 2.76594 13.0751 2.68599 13.0751 2.60263C13.0751 2.51927 13.042 2.43932 12.983 2.38038L11.205 0.602371C11.1611 0.558277 11.105 0.528222 11.044 0.516016C10.9829 0.50381 10.9197 0.510002 10.8621 0.533807C10.8046 0.557613 10.7555 0.59796 10.7209 0.649734C10.6864 0.701507 10.668 0.762375 10.668 0.824622L10.6685 2.28837L0.314696 2.28792V2.91734L10.6685 2.91689L10.668 4.38064C10.668 4.44289 10.6864 4.50375 10.7209 4.55553C10.7555 4.6073 10.8046 4.64765 10.8621 4.67145C10.9197 4.69526 10.9829 4.70145 11.044 4.68925C11.105 4.67704 11.1611 4.64698 11.205 4.60289Z"
+                                  className="fill-[#F5F5F5] group-hover:fill-[#F20003] transition-all duration-500"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </Form>
+                  </div>
+                )}
               </Formik>
             </div>
             <div className="md:w-[40%] h-full">

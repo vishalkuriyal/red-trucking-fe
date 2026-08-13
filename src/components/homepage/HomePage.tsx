@@ -11,11 +11,54 @@ import HomeExploreBlogs from "./HomeExploreBlogs";
 import HomeContactUs from "./HomeContactUs";
 import HomePassion from "./HomePassion";
 import video from "../../assets/video/billboard-highway.mp4";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const HomePage = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    // Set Page Title
+    document.title = "R.E.D. Trucking & Logistics | Freight & Drayge Services";
+
+    // --- Description ---
+    let metaDescription = document.querySelector<HTMLMetaElement>(
+      "meta[name='description']",
+    );
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute(
+      "content",
+      "R.E.D. Trucking & Logistics provides reliable freight transportation, warehousing, transloading, and Drayage solutions across the USA.",
+    );
+
+    // --- Keywords ---
+    // let metaKeywords = document.querySelector<HTMLMetaElement>(
+    //   "meta[name='keywords']",
+    // );
+    // if (!metaKeywords) {
+    //   metaKeywords = document.createElement("meta");
+    //   metaKeywords.name = "keywords";
+    //   document.head.appendChild(metaKeywords);
+    // }
+    // metaKeywords.setAttribute(
+    //   "content",
+    //   "Digital Marketing & IT Services Company",
+    // );
+    // --- Canonical ---
+    // let linkTag = document.querySelector<HTMLLinkElement>(
+    //   "link[rel='canonical']",
+    // );
+    // if (!linkTag) {
+    //   linkTag = document.createElement("link");
+    //   linkTag.rel = "canonical";
+    //   document.head.appendChild(linkTag);
+    // }
+    // linkTag.setAttribute("href", "https://www.techqilla.com");
+  }, []);
 
   const handlePlay = () => {
     const video = videoRef.current;

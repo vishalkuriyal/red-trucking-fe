@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -26,31 +26,41 @@ interface DriverApplicationFormValues {
   receivesCommunication: boolean;
 }
 
+// TODO: paste your Apps Script Web App URL here (ends in /exec)
+const SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbzsKze8WFDKoxfQ3DNQ0rCPteoFxNrQkKSYtuRVKs-jLVgSndhk43feTaNyca7eTTM7/exec";
+
+const initialFormValues: DriverApplicationFormValues = {
+  firstName: "",
+  lastName: "",
+  phoneNumber: "",
+  email: "",
+  terminal: "Newark (NY/NJ)",
+  cdlA: "",
+  yearObtainedCdlA: "",
+  hasTwic: "",
+  portExperience: "",
+  portExperienceYears: "",
+  hazMat: "",
+  isWillingToGetHazMat: "",
+  etc: "",
+  addressLine1: "",
+  addressLine2: "",
+  country: "United States",
+  city: "",
+  stateProvince: "",
+  zipCode: "",
+  receivesCommunication: false,
+};
+
 const OwnerOperatorForm: React.FC = () => {
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
   // Initialize form with Formik
   const formik = useFormik<DriverApplicationFormValues>({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      phoneNumber: "",
-      email: "",
-      terminal: "Newark (NY/NJ)",
-      cdlA: "",
-      yearObtainedCdlA: "",
-      hasTwic: "",
-      portExperience: "",
-      portExperienceYears: "",
-      hazMat: "",
-      isWillingToGetHazMat: "",
-      etc: "",
-      addressLine1: "",
-      addressLine2: "",
-      country: "United States",
-      city: "",
-      stateProvince: "",
-      zipCode: "",
-      receivesCommunication: false,
-    },
+    initialValues: initialFormValues,
     validationSchema: Yup.object({
       firstName: Yup.string().required("First name is required"),
       lastName: Yup.string().required("Last name is required"),
@@ -60,7 +70,7 @@ const OwnerOperatorForm: React.FC = () => {
       phoneNumber: Yup.string().required("Phone number is required"),
       cdlA: Yup.string().required("CDL A information is required"),
       yearObtainedCdlA: Yup.string().required(
-        "Year obtained CDL A is required"
+        "Year obtained CDL A is required",
       ),
       hasTwic: Yup.string().required("TWIC information is required"),
       hazMat: Yup.string().required("HazMat information is required"),
@@ -70,71 +80,53 @@ const OwnerOperatorForm: React.FC = () => {
       stateProvince: Yup.string().required("State/Province is required"),
       zipCode: Yup.string().required("ZIP/Postal Code is required"),
     }),
-    onSubmit: (values) => {
-      console.log("Form values:", values);
-
-      window.open(
-        "https://intelliapp.driverapponline.com/c/horizonfreightsystem?r=RED&uri_b=ia_horizonfreightsystem_1349355994"
-      );
-      // Here you would send the form data to your backend
-      // handleSubmitToBackend(values);
-      formik.resetForm({
-        values: {
-          firstName: "",
-          lastName: "",
-          phoneNumber: "",
-          email: "",
-          terminal: "Newark (NY/NJ)",
-          cdlA: "",
-          yearObtainedCdlA: "",
-          hasTwic: "",
-          portExperience: "",
-          portExperienceYears: "",
-          hazMat: "",
-          isWillingToGetHazMat: "",
-          etc: "",
-          addressLine1: "",
-          addressLine2: "",
-          country: "United States",
-          city: "",
-          stateProvince: "",
-          zipCode: "",
-          receivesCommunication: false,
-        },
-      });
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      try {
+        await fetch(SHEET_URL, {
+          method: "POST",
+          mode: "no-cors",
+          body: new URLSearchParams({
+            formType: "application",
+            ...values,
+            receivesCommunication: String(values.receivesCommunication),
+          }),
+        });
+        setSubmitStatus("success");
+        window.open(
+          "https://intelliapp.driverapponline.com/c/horizonfreightsystem?r=RED&uri_b=ia_horizonfreightsystem_1349355994",
+        );
+      } catch (err) {
+        console.error("Sheet submission failed:", err);
+        setSubmitStatus("error");
+      } finally {
+        setSubmitting(false);
+        resetForm({ values: initialFormValues });
+      }
     },
   });
 
-  // Function to submit form data to backend
-  // const handleSubmitToBackend = async (values: DriverApplicationFormValues) => {
-  //   try {
-  //     // Replace with your actual API endpoint
-  //     const response = await fetch(
-  //       "https://your-api-endpoint.com/driver-application",
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(values),
-  //       }
-  //     );
-
-  //     if (response.ok) {
-  //       alert("Application submitted successfully!");
-  //       formik.resetForm();
-  //     } else {
-  //       alert("Failed to submit application. Please try again.");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error submitting form:", error);
-  //     alert("An error occurred while submitting your application.");
-  //   }
-  // };
+  useEffect(() => {
+    if (submitStatus !== "idle") {
+      const timer = setTimeout(() => setSubmitStatus("idle"), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus]);
 
   return (
     <div className="bg-secondary text-white min-h-screen p-6">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-14 border-t border-[#3c3c3c]">
+        {submitStatus === "success" && (
+          <div className="bg-green-600/20 border border-green-500 text-green-400 p-4 mb-6 max-w-4xl mx-auto">
+            Application submitted! You'll also be redirected to complete your
+            driver profile.
+          </div>
+        )}
+        {submitStatus === "error" && (
+          <div className="bg-red-600/20 border border-red-500 text-red-400 p-4 mb-6 max-w-4xl mx-auto">
+            Something went wrong submitting your application. Please try again.
+          </div>
+        )}
+
         <form onSubmit={formik.handleSubmit} className="max-w-4xl mx-auto">
           {/* Personal Information */}
           <div className="mb-8">
@@ -364,17 +356,14 @@ const OwnerOperatorForm: React.FC = () => {
                 <div className="flex gap-1">
                   <label className="flex items-center cursor-pointer">
                     <div className="relative">
-                      {/* Hidden original radio input */}
                       <input
                         type="radio"
                         name="hasTwic"
                         value="Yes"
                         checked={formik.values.hasTwic === "Yes"}
                         onChange={formik.handleChange}
-                        className="sr-only" // Visually hidden but still accessible
+                        className="sr-only"
                       />
-
-                      {/* Custom radio appearance */}
                       <div
                         className={`px-3 py-2 flex items-center font-kindsans-regular justify-center ${
                           formik.values.hasTwic === "Yes"
@@ -388,17 +377,14 @@ const OwnerOperatorForm: React.FC = () => {
                   </label>
                   <label className="flex items-center cursor-pointer">
                     <div className="relative">
-                      {/* Hidden original radio input */}
                       <input
                         type="radio"
                         name="hasTwic"
                         value="No"
                         checked={formik.values.hasTwic === "No"}
                         onChange={formik.handleChange}
-                        className="sr-only" // Visually hidden but still accessible
+                        className="sr-only"
                       />
-
-                      {/* Custom radio appearance */}
                       <div
                         className={`px-3 py-2 flex items-center font-kindsans-regular justify-center ${
                           formik.values.hasTwic === "No"
@@ -424,17 +410,14 @@ const OwnerOperatorForm: React.FC = () => {
                 <div className="flex gap-2">
                   <label className="flex items-center cursor-pointer">
                     <div className="relative">
-                      {/* Hidden original radio input */}
                       <input
                         type="radio"
                         name="portExperience"
                         value="Yes"
                         checked={formik.values.portExperience === "Yes"}
                         onChange={formik.handleChange}
-                        className="sr-only" // Visually hidden but still accessible
+                        className="sr-only"
                       />
-
-                      {/* Custom radio appearance */}
                       <div
                         className={`px-3 py-2 flex items-center font-kindsans-regular justify-center ${
                           formik.values.portExperience === "Yes"
@@ -448,17 +431,14 @@ const OwnerOperatorForm: React.FC = () => {
                   </label>
                   <label className="flex items-center cursor-pointer">
                     <div className="relative">
-                      {/* Hidden original radio input */}
                       <input
                         type="radio"
                         name="portExperience"
                         value="No"
                         checked={formik.values.portExperience === "No"}
                         onChange={formik.handleChange}
-                        className="sr-only" // Visually hidden but still accessible
+                        className="sr-only"
                       />
-
-                      {/* Custom radio appearance */}
                       <div
                         className={`px-3 py-2 flex items-center font-kindsans-regular justify-center ${
                           formik.values.portExperience === "No"
@@ -504,17 +484,14 @@ const OwnerOperatorForm: React.FC = () => {
                 <div className="flex gap-2">
                   <label className="flex items-center cursor-pointer">
                     <div className="relative">
-                      {/* Hidden original radio input */}
                       <input
                         type="radio"
                         name="hazMat"
                         value="Yes"
                         checked={formik.values.hazMat === "Yes"}
                         onChange={formik.handleChange}
-                        className="sr-only" // Visually hidden but still accessible
+                        className="sr-only"
                       />
-
-                      {/* Custom radio appearance */}
                       <div
                         className={`px-3 py-2 flex items-center font-kindsans-regular justify-center ${
                           formik.values.hazMat === "Yes"
@@ -528,17 +505,14 @@ const OwnerOperatorForm: React.FC = () => {
                   </label>
                   <label className="flex items-center cursor-pointer">
                     <div className="relative">
-                      {/* Hidden original radio input */}
                       <input
                         type="radio"
                         name="hazMat"
                         value="No"
                         checked={formik.values.hazMat === "No"}
                         onChange={formik.handleChange}
-                        className="sr-only" // Visually hidden but still accessible
+                        className="sr-only"
                       />
-
-                      {/* Custom radio appearance */}
                       <div
                         className={`px-3 py-2 flex items-center font-kindsans-regular justify-center ${
                           formik.values.hazMat === "No"
@@ -564,17 +538,14 @@ const OwnerOperatorForm: React.FC = () => {
                 <div className="flex gap-2">
                   <label className="flex items-center cursor-pointer">
                     <div className="relative">
-                      {/* Hidden original radio input */}
                       <input
                         type="radio"
                         name="isWillingToGetHazMat"
                         value="Yes"
                         checked={formik.values.isWillingToGetHazMat === "Yes"}
                         onChange={formik.handleChange}
-                        className="sr-only" // Visually hidden but still accessible
+                        className="sr-only"
                       />
-
-                      {/* Custom radio appearance */}
                       <div
                         className={`px-3 py-2 flex items-center font-kindsans-regular justify-center ${
                           formik.values.isWillingToGetHazMat === "Yes"
@@ -588,17 +559,14 @@ const OwnerOperatorForm: React.FC = () => {
                   </label>
                   <label className="flex items-center cursor-pointer">
                     <div className="relative">
-                      {/* Hidden original radio input */}
                       <input
                         type="radio"
                         name="isWillingToGetHazMat"
                         value="No"
                         checked={formik.values.isWillingToGetHazMat === "No"}
                         onChange={formik.handleChange}
-                        className="sr-only" // Visually hidden but still accessible
+                        className="sr-only"
                       />
-
-                      {/* Custom radio appearance */}
                       <div
                         className={`px-3 py-2 flex items-center font-kindsans-regular justify-center ${
                           formik.values.isWillingToGetHazMat === "No"
@@ -839,10 +807,13 @@ const OwnerOperatorForm: React.FC = () => {
           {/* Submit button */}
           <div className="flex justify-start">
             <button
-              className="font-kindsans-bold flex group mt-8"
+              className="font-kindsans-bold flex group mt-8 disabled:opacity-60"
               type="submit"
+              disabled={formik.isSubmitting}
             >
-              <p className="py-4 px-5 bg-primary text-white">Submit</p>
+              <p className="py-4 px-5 bg-primary text-white">
+                {formik.isSubmitting ? "Submitting..." : "Submit"}
+              </p>
               <div className="bg-[#D00003] p-[10px]">
                 <div className="size-10 flex justify-center items-center border border-white rounded-full group-hover:bg-white transition-all duration-500">
                   <svg
