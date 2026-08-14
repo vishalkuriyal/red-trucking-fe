@@ -34,7 +34,7 @@ interface ContactFormValues {
 
 // TODO: paste your Apps Script Web App URL here (ends in /exec)
 const SHEET_URL =
-  "https://script.google.com/macros/s/AKfycbzsKze8WFDKoxfQ3DNQ0rCPteoFxNrQkKSYtuRVKs-jLVgSndhk43feTaNyca7eTTM7/exec";
+  "https://script.google.com/macros/s/AKfycbwqFQ2Dk9QH7rYbpkeEfC2nPuG-6Tlfw1G4CTUvN7mdtsPst3kC-nLyWFo9YFig6ms5/exec";
 
 const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState<

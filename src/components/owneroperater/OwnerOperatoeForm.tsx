@@ -16,6 +16,7 @@ interface DriverApplicationFormValues {
   portExperienceYears: string;
   hazMat: string;
   isWillingToGetHazMat: string;
+  drivingExperience: string;
   etc: string;
   addressLine1: string;
   addressLine2: string;
@@ -28,7 +29,7 @@ interface DriverApplicationFormValues {
 
 // TODO: paste your Apps Script Web App URL here (ends in /exec)
 const SHEET_URL =
-  "https://script.google.com/macros/s/AKfycbzsKze8WFDKoxfQ3DNQ0rCPteoFxNrQkKSYtuRVKs-jLVgSndhk43feTaNyca7eTTM7/exec";
+  "https://script.google.com/macros/s/AKfycbwgyzYM9_sILfYOTCd76Jrm0rU01OBRJ8L2mSQCM_csKtCJOgB7swkU1Mi_jui9E9A5/exec";
 
 const initialFormValues: DriverApplicationFormValues = {
   firstName: "",
@@ -43,6 +44,7 @@ const initialFormValues: DriverApplicationFormValues = {
   portExperienceYears: "",
   hazMat: "",
   isWillingToGetHazMat: "",
+  drivingExperience: "",
   etc: "",
   addressLine1: "",
   addressLine2: "",
@@ -590,6 +592,9 @@ const OwnerOperatorForm: React.FC = () => {
                 <select
                   id="drivingExperience"
                   name="drivingExperience"
+                     onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.drivingExperience}
                   className="w-full p-2 bg-secondary border border-[#bdbdbd]/30 outline-none "
                 >
                   <option value="">Please select</option>
