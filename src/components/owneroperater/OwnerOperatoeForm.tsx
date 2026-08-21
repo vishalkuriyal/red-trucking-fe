@@ -29,7 +29,7 @@ interface DriverApplicationFormValues {
 
 // TODO: paste your Apps Script Web App URL here (ends in /exec)
 const SHEET_URL =
-  "https://script.google.com/macros/s/AKfycbwgyzYM9_sILfYOTCd76Jrm0rU01OBRJ8L2mSQCM_csKtCJOgB7swkU1Mi_jui9E9A5/exec";
+  "https://script.google.com/macros/s/AKfycbzKUq_t6-eKtnvqZC2fB9eJPw0FVpZ5qAdc-7s7vyLEGyvDMV--HCIg2wcRTb46VFJPIQ/exec";
 
 const initialFormValues: DriverApplicationFormValues = {
   firstName: "",
