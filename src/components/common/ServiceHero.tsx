@@ -26,7 +26,7 @@ const otherServices: OtherServiceType[] = [
   {
     name: "WAREHOUSE",
     icon: warehouse,
-    path: "/warehousing",
+    path: "/warehouse",
   },
   {
     name: "LOGISTICS",
@@ -66,7 +66,7 @@ const ServiceHero = ({
         </div>
       </div>
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20">
-        <h3 className="anton-regular text-6xl md:text-[128px] md:leading-[114px] gradient-stroke-primary absolute -top-10">
+        <h3 className="anton-regular text-6xl md:text-[128px] md:leading-[114px] gradient-stroke-4 absolute -top-10">
           {serviceName}
         </h3>
         <div className="pb-8 md:pb-14 grid md:grid-cols-4 gap-7">

@@ -4,7 +4,7 @@ const DedicatedFleets = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto py-8 md:py-28">
-        <h3 className="anton-regular text-6xl md:text-[128px] gradient-stroke md:leading-[114px] px-5 md:px-20 mb-10">
+        <h3 className="anton-regular text-6xl md:text-[128px] gradient-stroke-white md:leading-[114px] px-5 md:px-20 mb-10">
           DEDICATED FLEETS
         </h3>
         <div className="flex flex-col md:flex-row gap-8 md:gap-0 justify-between pr-5 md:pr-20">

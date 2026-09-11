@@ -18,7 +18,7 @@ const BlogsListing = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20">
-        <h3 className="anton-regular text-5xl md:text-[128px] md:leading-[114px] gradient-stroke-primary absolute -top-10 uppercase">
+        <h3 className="anton-regular text-5xl md:text-[128px] md:leading-[114px] gradient-stroke-4 absolute -top-10 uppercase">
           READ OUR BLOGS
         </h3>
       </div>

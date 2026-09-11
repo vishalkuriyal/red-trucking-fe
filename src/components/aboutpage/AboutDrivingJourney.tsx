@@ -12,7 +12,7 @@ const AboutDrivingJourney = () => {
   return (
     <div className="bg-[#191919]">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-10 relative">
-        <h2 className="text-5xl md:text-[96px] md:leading-[114px] gradient-stroke-3 anton-regular mb-4 md:mb-0">
+        <h2 className="text-5xl md:text-[96px] md:leading-[114px] gradient-stroke-white anton-regular mb-4 md:mb-0">
           DRIVING YOUR JOURNEY
         </h2>
         <div className="flex flex-col md:flex-row gap-6 md:gap-0">

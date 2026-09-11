@@ -17,7 +17,6 @@ interface DriverApplicationFormValues {
   hazMat: string;
   isWillingToGetHazMat: string;
   drivingExperience: string;
-  etc: string;
   addressLine1: string;
   addressLine2: string;
   country: string;
@@ -45,7 +44,6 @@ const initialFormValues: DriverApplicationFormValues = {
   hazMat: "",
   isWillingToGetHazMat: "",
   drivingExperience: "",
-  etc: "",
   addressLine1: "",
   addressLine2: "",
   country: "United States",
@@ -288,9 +286,8 @@ const OwnerOperatorForm: React.FC = () => {
                   className="w-full p-2 bg-secondary border border-[#bdbdbd]/30 outline-none "
                 >
                   <option value="Newark (NY/NJ)">Newark (NY/NJ)</option>
-                  <option value="Charleston">Charleston</option>
-                  <option value="Savannah">Savannah</option>
-                  <option value="Houston">Houston</option>
+                  <option value="Charleston">Philadephia</option>
+                  <option value="Savannah">Jacksonville</option>
                 </select>
               </div>
               <div>
@@ -606,7 +603,7 @@ const OwnerOperatorForm: React.FC = () => {
               </div>
             </div>
 
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <label htmlFor="etc" className="block font-kindsans-medium mb-1">
                 ETC
               </label>
@@ -619,7 +616,7 @@ const OwnerOperatorForm: React.FC = () => {
                 value={formik.values.etc}
                 className="w-full p-2 bg-secondary border border-[#bdbdbd]/30 outline-none "
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Address */}

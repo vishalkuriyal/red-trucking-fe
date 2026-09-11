@@ -4,7 +4,7 @@ const SharedSpace = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 mb-8 pt-8 md:pt-28">
-        <h3 className="anton-regular text-6xl md:text-[128px] gradient-stroke">
+        <h3 className="anton-regular text-6xl md:text-[128px] gradient-stroke-white">
           SHARED STROKE
         </h3>
       </div>

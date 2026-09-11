@@ -10,7 +10,7 @@ const AboutWhyChooseUs = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
-        <h3 className="anton-regular text-5xl md:text-[128px] md:leading-[114px] gradient-stroke text-center mb-8">
+        <h3 className="anton-regular text-5xl md:text-[128px] md:leading-[114px] gradient-stroke-white text-center mb-8">
           WHY CHOOSE US
         </h3>
         <p className="anton-regular text-4xl text-white text-center mb-10">

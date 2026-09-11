@@ -4,7 +4,7 @@ const AboutMission = () => {
   return (
     <div className="bg-secondary">
       <div className="max-w-screen-2xl mx-auto px-5 md:px-20 py-8 md:py-28">
-        <h3 className="anton-regular text-7xl md:text-[128px] md:leading-[114px] gradient-stroke mb-10">
+        <h3 className="anton-regular text-7xl md:text-[128px] md:leading-[114px] gradient-stroke-white mb-10">
           OUR MISSION
         </h3>
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-8 md:gap-0">

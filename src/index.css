@@ -76,6 +76,21 @@ body {
   -webkit-text-stroke: 1px white;
 }
 
+.gradient-stroke-4 {
+  position: relative;
+  background: linear-gradient(
+    to top,
+    #f20003 50%,
+    white 80%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  -webkit-text-stroke: 1px #f20003;
+}
+
 .gradient-stroke-2 {
   position: relative;
   color: transparent; /* Fill color */
