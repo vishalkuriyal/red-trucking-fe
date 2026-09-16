@@ -800,8 +800,7 @@ const OwnerOperatorForm: React.FC = () => {
                 className="mt-1 mr-2"
               />
               <span className="font-kindsans-medium">
-                Would you like to receive communication from Red Trucking, Red
-                Trucking Transport Services
+                Would you like to receive communication from R.E.D Trucking & Logistics
               </span>
             </label>
           </div>

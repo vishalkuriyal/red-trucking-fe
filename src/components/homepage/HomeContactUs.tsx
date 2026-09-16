@@ -11,6 +11,7 @@ const HomeContactUs = () => {
         </h3>
         <div className="flex justify-center">
           <PrimaryButton
+            className="border border-white py-2 px-4"
             onClick={() => {
               navigate("/contact-us");
               window.scrollTo({ top: 0, behavior: "smooth" });
